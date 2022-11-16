@@ -9,18 +9,7 @@
       name="viewport"
     />
     <!-- Author -->
-    <meta name="author" content="Potential.Inc" />
-    <!-- description -->
-    <meta name="description" content="트레이너님, OOO하고 신규회원 늘려보세요" />
-    <!-- keywords -->
-    <meta
-      name="keywords"
-      content="체성분분석, ai체성분분석, 모바일헬스케어, 인바디, 눈바디, 체지방률, 근육량, 골격근량, 헬스매니아, 헬창"
-    />
-    <meta
-      name="naver-site-verification"
-      content="f2169b2b124236826fe79ce65733c7121bae7a38"
-    />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Page Title -->
@@ -61,21 +50,6 @@
     <link rel="stylesheet" type="text/css" href="{% static 'vendor/css/starability-all.css' %}"/>
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="http://potentialai.com/pilates" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="트레이너님, OOO하고 신규회원 늘려보세요" />
-    <meta
-      property="og:description"
-      content="포텐셜은 AI기반 체성분 분석 서비스 입니다."
-    />
-    <meta
-      property="og:image"
-      content="{% static 'studio/img/og_image_ba.png' %}"
-    />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-Q9PK8P2QVM"
@@ -152,46 +126,6 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJnKEvlwpyjXfS_h-J1Cne2fPMqeb44Mk"></script>
   <script src="{% static 'studio/js/map.js' %}"></script>
   <script src="{% static 'studio/js/script.js' %}"></script>
-  <!-- Channel Plugin Scripts -->
-<script>
-  (function() {
-    var w = window;
-    if (w.ChannelIO) {
-      return (window.console.error || window.console.log || function(){})('ChannelIO script included twice.');
-    }
-    var ch = function() {
-      ch.c(arguments);
-    };
-    ch.q = [];
-    ch.c = function(args) {
-      ch.q.push(args);
-    };
-    w.ChannelIO = ch;
-    function l() {
-      if (w.ChannelIOInitialized) {
-        return;
-      }
-      w.ChannelIOInitialized = true;
-      var s = document.createElement('script');
-      s.type = 'text/javascript';
-      s.async = true;
-      s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
-      s.charset = 'UTF-8';
-      var x = document.getElementsByTagName('script')[0];
-      x.parentNode.insertBefore(s, x);
-    }
-    if (document.readyState === 'complete') {
-      l();
-    } else if (window.attachEvent) {
-      window.attachEvent('onload', l);
-    } else {
-      window.addEventListener('DOMContentLoaded', l, false);
-      window.addEventListener('load', l, false);
-    }
-  })();
-  ChannelIO('boot', {
-    "pluginKey": "35578314-96e3-41aa-aa26-fe9594c9a693"
-  });
-</script>
+ 
 <!-- End Channel Plugin -->
 </html>
