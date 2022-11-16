@@ -1,0 +1,378 @@
+{% extends 'base.html'%} 
+{% block page_title %}포텐셜{% endblock %}
+{% load static %} {% block pagecontent %}
+<body data-spy="scroll" data-target=".navbar" data-offset="90">
+
+  <!-- Preloader -->
+  <div class="preloader">
+      <div class="centrize full-width">
+          <div class="vertical-center">
+              <div class="spinner">
+                  <div class="double-bounce1"></div>
+                  <div class="double-bounce2"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Preloader End -->
+  
+  <!--Header Start-->
+  <header>
+  
+      <!--Navigation-->
+      <nav class="navbar navbar-top-default navbar-expand-lg navbar-simple nav-line">
+          <div class="container">
+              <a href="#home" title="Logo" class="logo scroll">
+                  <!--Logo Default-->
+                  <img src="{% static 'studio/img/logo.png' %}" alt="logo" class="logo-dark">
+              </a>
+  
+              <!--Nav Links-->
+              <div class="collapse navbar-collapse" id="megaone">
+                  <div class="navbar-nav ml-auto">
+                      <a class="nav-link active scroll" href="#home">Home</a>
+                      <a class="nav-link scroll" href="#about">About</a>
+                      
+                      <a class="nav-link scroll" href="#contact">신청하기</a>
+                  </div>
+              </div>
+  
+              <!--Side Menu Button-->
+              <a href="javascript:void(0)" class="sidemenu_btn" id="sidemenu_toggle">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </a>
+  
+          </div>
+      </nav>
+  
+      <!--Side Nav-->
+      <div class="side-menu hidden">
+          <div class="inner-wrapper">
+              <span class="btn-close" id="btn_sideNavClose"><i></i><i></i></span>
+              <nav class="side-nav w-100">
+                  <ul class="navbar-nav">
+                      <li class="nav-item">
+                          <a class="nav-link scroll" href="#home">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link scroll" href="#about">About</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link scroll" href="#services">Services</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link scroll" href="#portfolio">Work</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link scroll" href="#client">Services</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link scroll" href="#blog">Blog</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link scroll" href="#contact">Contact</a>
+                      </li>
+                  </ul>
+              </nav>
+  
+              <div class="side-footer text-white w-100">
+                  <ul class="social-icons-simple">
+                      <li><a class="facebook-text-hvr" href="javascript:void(0)"><i class="fab fa-facebook-f"></i> </a> </li>
+                      <li><a class="instagram-text-hvr" href="javascript:void(0)"><i class="fab fa-instagram"></i> </a> </li>
+                      <li><a class="twitter-text-hvr" href="javascript:void(0)"><i class="fab fa-twitter"></i> </a> </li>
+                  </ul>
+                  <p class="text-white">&copy; 2020 MegaOne. Made With Love by Themesindustry</p>
+              </div>
+          </div>
+      </div>
+      <a id="close_side_menu" href="javascript:void(0);"></a>
+      <!-- End side menu -->
+  
+  </header>
+  <!--Header End-->
+  
+  <!--Home Start-->
+  <section id="home" class="home-banner">
+      <div class="container">
+          <div class="row align-items-lg-center">
+              <div class="col-lg-8">
+                  <!-- Box Area -->
+                  <div class="heading-box">
+                    </b></p>
+                    <h2>
+                        
+                        <b>W88 전세계 최고의 <br>온라인 스포츠 배팅 사이트</b></h2>
+                  </div>
+              </div>
+  
+              <div class="col-lg-4">
+                  <div class="slider-right">
+                      <svg class="slider-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700">
+                          <g>
+                              <path data-depth="0.05" id="shape-1" fill="#a07bf7" d="M355.43 45.1C398 31.19 442.59 29 484 39.88c55.11 14.5 117.25 54.91 134.57 160.78 0 0 18.6 99.41-12.78 232 0 0-38.65 142.61-90.66 192 0 0-59 61.95-148.78 59.18 0 0-42.15 0-102.34-27.17 0 0-184-88.78-240.17-199S11 211.81 150.69 135.43C241.1 86 314.73 58.41 355.43 45.1z" opacity=".25"/>
+                              <path data-depth="0.07" id="shape-2" fill="#a07bf7" d="M105.78 387.15c-15.76-38.08-21-79.83-14.15-120.46C100.79 212.61 133 148.14 228 116.38c0 0 89-32 211.88-21.76 0 0 132.5 15.66 181.18 57.51 0 0 60.65 46.59 64.69 131.66 0 0 3.11 39.73-17.22 100.45 0 0-67.27 186.43-163.35 255.44S282.55 687.58 202.89 567c-51.57-78-82.04-143.42-97.11-179.85z" opacity=".25"/>
+                              <path data-depth="0.09" id="shape-3" fill="#a07bf7" d="M112.59 129.56c18.72-39.73 47.85-73.83 84.82-97.56 49.2-31.55 123.12-52.4 216.29-.29 0 0 89.1 47.22 169.11 151.43 0 0 82.67 115.68 84.6 184.07 0 0 6.77 81.22-57.4 145.42 0 0-29.09 30.94-91.54 58.46 0 0-195.21 80.68-318.52 54.43S2.54 484.38 40.43 335.12C65 238.51 94.68 167.58 112.59 129.56z" opacity=".25"/>
+                              <path id="shape-4" d="M129.39 153.77C146.74 117 173.73 85.35 208 63.38c45.59-29.25 114.09-48.57 200.42-.28 0 0 82.56 43.75 156.7 140.31 0 0 76.61 107.2 78.4 170.57 0 0 6.27 75.26-53.19 134.75 0 0-27 28.67-84.82 54.17 0 0-180.89 74.76-295.15 50.43S27.41 482.55 62.52 344.24c22.74-89.52 50.27-155.24 66.87-190.47z" opacity="0"/>
+                              <clipPath id="shape-img">
+                                  <use xlink:href="#shape-4"  style="overflow:visible;"/>
+                              </clipPath>
+                          </g>
+                          <!--Change Image path here-->
+                          <image data-depth="0.1" clip-path="url(#shape-img)" height="100%" width="100%" xlink:href="{% static 'studio/img/slider-img.jpg' %}" />
+                      </svg>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!--Home End-->
+   <!--About Star-->
+   <section id="about2">
+    <div class="container">
+        <div class="row dot-box" style = "align-items:center; justify-content=center">
+
+            <!-- Heading Area-->
+            <div class="col-lg-6 order-lg-2" >
+              
+                <div class="heading-area pl-lg-4 p-0">
+                    <h6 class="sub-title main-color"><b>W88 어떤 곳인가요?</b></h6>
+                    <h2 class="title" ><b>W88의 장점</b></h2>
+                    <!--List-->
+                    <p>
+                        W88은 2014년에 한국 서비스를 시작하였으며 19-20 EPL 울버햄튼 원더러스의 메인스폰서, 19-20 
+                        레스터시티와의 파트너쉽 계약을 하며 세계적으로 이름을 날리기 시작했습니다. 스포츠배팅, 라이브딜러 
+                        카지노, 슬롯, P2P(포커, 슈퍼볼), 키노등의 혁신적인 배팅시스템을 통해 한발 앞선 기술이 적용된 최고의 
+                        게임과 최고의 서비스를 제공하여 급변하고 있는 아시아 게임시장의 유행을 선도하는 해외 배팅사이트 입니다.
+                        <br><br> 
+                        필리핀 정부의 엄격한 심사를 통해 라이센스를 취득하여 합법적으로 운영중인 해외배팅사이트이며 한국 
+                        서비스를 시작한 뒤 사이트의 한글화 그리고 한국어 상담이 가능한 친절한 고객센터, 간편한 가입과 원화
+                        (KRW)거래가 가능하다는 장점이 있습니다. W88 카지노에는 1000개이상의 화려한 그래픽과 우수한 게임
+                        성을 자랑하는 다수의 슬롯게임이 매력포인트 이며 유저들이 좀 더 이용하기 쉽도록 알기 쉬운 플렛폼으로
+                        신규게임,이색게임, 인기게임으로 나누어져 있습니다. 라이브카지노는 바카라, 룰렛, 블랙잭, 식보등을 제공
+                        하며 마이크로 게이밍의 슬롯게임의 잭팟당첨의 행운을 경험해보시기 바랍니다.
+                        <br><br>                        
+                        <b>W88 우회주소</b> 
+                        <br><br>
+                        국내 접속시 유해차단으로 접속이 안되는 경우가 있는데 <a href = "">W88 우회주소</a>로 접속해주시기 바랍니다.
+ 
+
+                    </p>
+                    
+                   
+                </div>
+            </div>
+
+            <!-- Features Box-->
+            <div class="col-lg-6">
+                <!--About Image-->
+                <div class="about-image">
+                    <img src="{% static 'studio/img/bg_1.jpg' %}" alt="about-img" style = "width:100%">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+   </section>
+  <!--About End-->
+  <!--Home End-->
+   <!--About Star-->
+   <section id="about2">
+    <div class="container">
+        <div class="row dot-box" style = "align-items:center; justify-content=center">
+
+            <!-- Heading Area-->
+            <div class="col-lg-6" >
+              
+                <div class="heading-area pl-lg-4 p-0">
+                    <h6 class="sub-title main-color"><b>W88의 이벤트</b></h6>
+                    <h2 class="title" ><b>리뷰 프로모션도<br>만나보세요</b></h2>
+            
+                   
+                </div>
+            </div>
+
+            <!-- Features Box-->
+            <div class="col-lg-6">
+                <!--About Image-->
+                <div class="about-image">
+                    <img src="{% static 'studio/img/bg_2.jpg' %}" alt="about-img" style = "width:100%">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+   </section>
+   <section id="portfolio" class="cube-portfolio1 text-center no-transition">
+    <div class="container">
+        
+        <!--Heading-->
+        <div class="heading-area pb-lg-5">
+            <img style = "width:100%"" src = "{% static 'studio/img/sexy_calendar.png' %}">
+        </div>
+  
+  
+    </div>
+  </section>
+  <section id="portfolio" class="cube-portfolio1 text-center no-transition">
+    <div class="container">
+        <!--Heading-->
+        <div class="heading-area pb-lg-5">
+            <img style = "width:100%"" src = "{% static 'studio/img/bg_3.jpg' %}">
+        </div>
+        <div class="row row-1 no-gutters">
+            <div class="col-lg-12 col-md-12 col-sm-12 heading-col text-center wow fadeIn" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: fadeIn;">
+               <h5 class="subheading ">국내은행 계좌사용 및 가상화폐 사용으로 안전한 입출금 시스템
+                </h5>
+               <h2 class="heading"><B>W88 입금 방법 안내</b></h2>
+            </div>
+         </div>
+       <p style = "margin-top:30px">
+        W88에 돈을 입금하는 것은 월드컵 경기 배팅이나 온라인 카지노 게임에 참여할 수 있는 첫 번째 단계입니다. 이는 간단해 보이지만 온라인 베팅을 처음 접하는 이용자들에게는 어렵기 때문에 W88 계정에 입금하는 2가지 방법을 따라주세요.
+        <br><br><br>
+        <a href = "">W88 링크 모바일</a><br>
+        <a href = "">W88 링크 데스크탑</a><br><br>
+     </p>
+     <h3 style = "text-align:left">방법 1:  고객센터를 통해 신분증과 계좌사본 제출</h3>
+     <p style = "text-align:left; margin-top:10px">
+        저희 사이트는 해외 정부의 라이센스를 받아 운영 중인 해외 베팅 사이트로 모든 신규 회원은 입금 시 신분증과 계좌 사본을 통한 본인 확인 절차를 거치셔야만 이용하실 수 있습니다. 
+        카카오톡 : w88kr (친구 추가 -> ID로 추가, 사칭 채널 주의) 또는 라인 : w88korea를 추가하셔서 제출 및 문의해 주시면 되시고, 승인은 제출 후 최대 24시간 소요됩니다.
+     </p>
+     <h3 style = "text-align:left">방법 2:  가상화폐 계정 등록 후 바로 입금하기</h3>
+     <p style = "text-align:left; margin-top:10px">
+        가상화폐 (BUSD, USDT ERC20, USDT TRC20)를 통한 입출금 시 위의 단계는 생략되며, 가상 화폐 계정 추가 후 바로 입금 가능합니다.
+     </p>
+     
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="container">
+        <h3 style = "text-align:left"> 
+            가상화폐 계정 등록하는 가장 쉬운 3 단계
+        </h3>
+     
+        <div class="row mt-lg-5 pt-lg-5">
+            <div class="col-lg-4 col-md-6">
+               <div class="team-item">
+                   <img src="{% static 'studio/img/crypto1.png' %}" alt="team">
+                   <div class="team-detail">
+                       <p class="m-0">1. Crypto 아이콘을 클릭해주세요.</p>                       
+                   </div>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="team-item">
+                    <img src="{% static 'studio/img/crypto2.png' %}" alt="team">
+                    <div class="team-detail">
+                        <p class="m-0">2. 본 아이디와 비슷한 별도의 ID 를 만들어주세요.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="team-item">
+                    <img src="{% static 'studio/img/crypto3.png' %}" alt="team">
+                    <div class="team-detail">
+                        <p class="m-0">3. 선호하는 거래소 선택 후, 쉽게 입출금 및 이용이 가능합니다. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="portfolio" class="cube-portfolio1 text-center no-transition">
+    <div class="container">
+  
+        <!--Heading-->
+        <div class="heading-area mx-570 pb-lg-5">
+            <h6 class="sub-title main-color">카타르 월드컵 죽음의 H조 경기 배팅하고 싶다면</h6>
+            <h2 class="title"><b><a href = "">W88 우회주소</a>로<br> 접속해주시기 바랍니다.</b></h2>
+            <p>W88 사이트 입출금 관련 문의사항이 있으시면 24시간 대기중인 <br>카카오톡 : w88kr 또는라인 : w88korea를 추가하셔서 문의 해주세요.</p>
+
+            <!--Portfolio Filters-->
+            <p></p>
+        </div>
+  
+  
+    </div>
+  </section>
+  <!--Footer Start-->
+  <footer class="footer-style-1 bg-light">
+      <div class="container">
+          <div class="row align-items-center">
+              <!--Social-->
+              <div class="col-lg-6">
+                  <div class="footer-social text-lg-left">
+                      <ul class="list-unstyled">
+                          <li><a class="wow fadeInUp" href="javascript:void(0);"><i aria-hidden="true"
+                                                                                    class="fab fa-facebook-f"></i></a></li>
+                          <li><a class="wow fadeInDown" href="javascript:void(0);"><i aria-hidden="true"
+                                                                                      class="fab fa-twitter"></i></a></li>
+                          <li><a class="wow fadeInUp" href="javascript:void(0);"><i aria-hidden="true"
+                                                                                    class="fab fa-google-plus-g"></i></a></li>
+                          <li><a class="wow fadeInDown" href="javascript:void(0);"><i aria-hidden="true"
+                                                                                      class="fab fa-linkedin-in"></i></a></li>
+                          <li><a class="wow fadeInUp" href="javascript:void(0);"><i aria-hidden="true"
+                                                                                    class="fab fa-instagram"></i></a></li>
+                          <li><a class="wow fadeInDown" href="javascript:void(0);"><i aria-hidden="true"
+                                                                                      class="fab fa-pinterest-p"></i></a></li>
+                      </ul>
+                  </div>
+              </div>
+              <!--Text-->
+              <div class="col-lg-6 text-lg-right">
+                  <p class="company-about fadeIn">© 2020 MegaOne. Made With Love By <a href="javascript:void(0);">Themesindustry</a>
+                  </p>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <!--Footer End-->
+  
+
+
+</body>  
+
+<script>
+    $(document).ready(function () {
+  
+      $("#ajax").click(function (e) {
+        e.preventDefault();
+          
+            var formData = new FormData();
+            formData.append("email", $("#email").val());
+         
+            $.ajax({
+              type: "POST",
+              url: "/api/earlyBird/",
+              data: formData,
+              cache: false,
+              contentType: false,
+              processData: false,
+              success: function (result) {
+            
+            alert("제출이 완료 되었습니다");
+            console.log(result);
+            
+                      
+      
+              },
+              error: function (result) {
+                console.log(result);
+                alert("제출에 실패했습니다.");
+              },
+          })
+    
+        })
+    
+    
+    });
+  </script>
+
+
+{% endblock %}
+

@@ -1,0 +1,197 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="viewport"
+    />
+    <!-- Author -->
+    <meta name="author" content="Potential.Inc" />
+    <!-- description -->
+    <meta name="description" content="트레이너님, OOO하고 신규회원 늘려보세요" />
+    <!-- keywords -->
+    <meta
+      name="keywords"
+      content="체성분분석, ai체성분분석, 모바일헬스케어, 인바디, 눈바디, 체지방률, 근육량, 골격근량, 헬스매니아, 헬창"
+    />
+    <meta
+      name="naver-site-verification"
+      content="f2169b2b124236826fe79ce65733c7121bae7a38"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Page Title -->
+    <title>{% block page_title %}{% endblock %}</title>
+    <!-- Favicon -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+
+    <link rel="icon" href="{% static 'studio/img/favicon.ico' %}" />
+    <!-- Bundle -->
+    <link rel="stylesheet" href="{% static 'vendor/css/bundle.min.css' %}" />
+    <!-- Plugin Css -->
+    <link href="{% static 'vendor/css/LineIcons.min.css' %}" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      href="{% static 'vendor/css/revolution-settings.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'vendor/css/jquery.fancybox.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'vendor/css/owl.carousel.min.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'vendor/css/swiper.min.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'vendor/css/cubeportfolio.min.css' %}"
+    />
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="{% static 'vendor/css/select2.min.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'vendor/css/jquery-ui.bundle.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'studio/css/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/css/starability-all.css' %}"/>
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="http://potentialai.com/pilates" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="트레이너님, OOO하고 신규회원 늘려보세요" />
+    <meta
+      property="og:description"
+      content="포텐셜은 AI기반 체성분 분석 서비스 입니다."
+    />
+    <meta
+      property="og:image"
+      content="{% static 'studio/img/og_image_ba.png' %}"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Q9PK8P2QVM"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-Q9PK8P2QVM");
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/2.0.0-alpha.2/cropper.min.js"
+      integrity="sha512-IlZV3863HqEgMeFLVllRjbNOoh8uVj0kgx0aYxgt4rdBABTZCl/h5MfshHD9BrnVs6Rs9yNN7kUQpzhcLkNmHw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/2.0.0-alpha.2/cropper.min.css"
+      integrity="sha512-6QxSiaKfNSQmmqwqpTNyhHErr+Bbm8u8HHSiinMEz0uimy9nu7lc/2NaXJiUJj2y4BApd5vgDjSHyLzC8nP6Ng=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/e792c3c0c0.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+  </head>
+
+  {% block pagecontent %} {% endblock %}
+
+
+  <!-- JavaScript -->
+  <script src="{% static 'vendor/js/bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/js/jquery.appear.js' %}"></script>
+  <script src="{% static 'vendor/js/jquery.fancybox.min.js' %}"></script>
+  <script src="{% static 'vendor/js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'vendor/js/parallaxie.min.js' %}"></script>
+  <script src="{% static 'vendor/js/wow.js' %}"></script>
+  <script src="{% static 'vendor/js/jquery.cubeportfolio.min.js' %}"></script>
+
+  <!-- REVOLUTION JS FILES -->
+  <script src="{% static 'vendor/js/jquery.themepunch.tools.min.js' %}"></script>
+  <script src="{% static 'vendor/js/jquery.themepunch.revolution.min.js' %}"></script>
+  <!-- SLIDER REVOLUTION EXTENSIONS -->
+  <script src="{% static 'vendor/js/extensions/revolution.extension.actions.min.js' %}"></script>
+  <script src="{% static 'vendor/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+  <script src="{% static 'vendor/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+  <script src="{% static 'vendor/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+  <script src="{% static 'vendor/js/extensions/revolution.extension.migration.min.js' %}"></script>
+  <script src="{% static 'vendor/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+  <script src="{% static 'vendor/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+  <script src="{% static 'vendor/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+  <script src="{% static 'vendor/js/extensions/revolution.extension.video.min.js' %}"></script>
+
+  <!--Google Map API-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJnKEvlwpyjXfS_h-J1Cne2fPMqeb44Mk"></script>
+  <script src="{% static 'studio/js/map.js' %}"></script>
+  <script src="{% static 'studio/js/script.js' %}"></script>
+  <!-- Channel Plugin Scripts -->
+<script>
+  (function() {
+    var w = window;
+    if (w.ChannelIO) {
+      return (window.console.error || window.console.log || function(){})('ChannelIO script included twice.');
+    }
+    var ch = function() {
+      ch.c(arguments);
+    };
+    ch.q = [];
+    ch.c = function(args) {
+      ch.q.push(args);
+    };
+    w.ChannelIO = ch;
+    function l() {
+      if (w.ChannelIOInitialized) {
+        return;
+      }
+      w.ChannelIOInitialized = true;
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
+      s.charset = 'UTF-8';
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    }
+    if (document.readyState === 'complete') {
+      l();
+    } else if (window.attachEvent) {
+      window.attachEvent('onload', l);
+    } else {
+      window.addEventListener('DOMContentLoaded', l, false);
+      window.addEventListener('load', l, false);
+    }
+  })();
+  ChannelIO('boot', {
+    "pluginKey": "35578314-96e3-41aa-aa26-fe9594c9a693"
+  });
+</script>
+<!-- End Channel Plugin -->
+</html>

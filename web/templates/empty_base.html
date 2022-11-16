@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8" />
+    <!-- Author -->
+    <meta name="author" content="Potential.Inc" />
+    <!-- description -->
+    <meta name="description" content="강한 남자를 위한 앱" />
+    <!-- keywords -->
+    <meta
+      name="keywords"
+      content="체성분분석, ai체성분분석, 모바일헬스케어, 인바디, 눈바디, 체지방률, 근육량, 골격근량, 헬스매니아, 헬창"
+    />
+    <meta
+      name="naver-site-verification"
+      content="f2169b2b124236826fe79ce65733c7121bae7a38"
+    />
+
+    <!-- Page Title -->
+    <title>{% block page_title %}{% endblock %}</title>
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'potential/img/favicon.ico' %}" />
+
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="http://potentialai.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="강한 남자를 위한 앱 포텐셜" />
+    <meta
+      property="og:description"
+      content="포텐셜은 AI기반 체성분 분석 서비스 입니다."
+    />
+    <meta
+      property="og:image"
+      content="{% static 'landing/img/ogimage.jpg' %}"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+ 
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Q9PK8P2QVM"
+    ></script>
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.0.0/kakao.min.js"
+  integrity="sha384-PFHeU/4gvSH8kpvhrigAPfZGBDPs372JceJq3jAXce11bVA6rMvGWzvP4fMQuBGL" crossorigin="anonymous"></script>
+
+  {% block pagecontent %} {% endblock %}
+
+  <script>
+    Kakao.init('e404725403d81be0fe46c9bf74605563'); // 사용하려는 앱의 JavaScript 키 입력
+  </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-Q9PK8P2QVM");
+    </script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script>
+      // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
+      Kakao.init("e404725403d81be0fe46c9bf74605563");
+
+      // SDK 초기화 여부를 판단합니다.
+      console.log(Kakao.isInitialized());
+    </script>
+
+</html>

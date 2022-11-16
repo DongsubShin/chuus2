@@ -1,0 +1,259 @@
+{% extends 'base.html' %} 
+{% block page_title %}체험 하기{% endblock %}
+{% load static %}
+{% block pagecontent %}
+
+	<!--begin::Global Stylesheets Bundle(used by all pages)-->
+	<link href="{% static 'assets/plugins/global/plugins.bundle.css' %}" rel="stylesheet" type="text/css" />
+	<link href="{% static 'assets/css/style.bundle.css' %}" rel="stylesheet" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <body data-spy="scroll" data-target=".navbar" data-offset="90" class="bg-white"> 
+
+
+   <section class="bg-white" id = "form_section">
+    <div class="container">
+      
+      <div class="row mb-5">
+        <!--begin::Col-->
+
+
+        <div class="col-md-12 fv-row mb-5">
+          <!--begin::Label-->
+          <div  style = "width:150px; text-align:center; margin: 0 auto;">
+            {% if feedBack.trainerUser.trainer.profile_image == "" %}
+                <a href="javascript:void(0)" class="post"><img src="/static/studio/img/testimonial-1.jpg" alt="image" style = "  border-radius:50%"></a>
+            {% else %}
+                <a href="javascript:void(0)" class="post"><img src={{feedBack.trainerUser.trainer.profile_image.url}} alt="image" style = "width:100px; height:100px;  border-radius:50%"></a>
+
+            {% endif %}
+            <div>
+                <br>  
+              <h5>{{feedBack.trainerUser.trainer.name}} 트레이너님</h5>
+                <p class="mb-0">{{feedBack.trainerUser.trainer.centerTrainers.last.center.name}}</p>
+            </div>
+        </div>
+        </div>
+        <!--end::Col-->
+
+        <!--begin::Col-->
+        <div class="col-md-12 fv-row mb-5">
+          <!--begin::Label-->
+          <label
+            class="d-flex align-items-center fs-6 fw-bold form-label mb-2"
+          >
+          <span class="required">평점</span>
+          </label>
+          <!--end::Label-->
+          <!--begin::Input wrapper-->
+          <div class="position-relative">
+            <!--begin::Input-->
+            <span class="starability-result" data-rating="{% widthratio feedBack.trainer_point 1 1 %}">
+            </span>
+            <span>
+              <b>({{feedBack.trainer_point}})</b>
+            </span>
+            <!--end::Input-->
+          </div>
+          <!--end::Input wrapper-->
+        </div>
+        <!--end::Col-->
+           <!--begin::Col-->
+           <div class="col-md-12 fv-row mb-5">
+            <!--begin::Label-->
+            <label
+              class="d-flex align-items-center fs-6 fw-bold form-label mb-2"
+            >
+            <span class="required">트레이너님 코멘트</span>
+            </label>
+            <!--end::Label-->
+            <!--begin::Input wrapper-->
+            <div class="position-relative">
+              <!--begin::Input-->
+              <p style = "width:100%; font-style: italic; ">{{feedBack.trainer_comment |linebreaks }}</p>
+  
+              <!--end::Input-->
+            </div>
+            <!--end::Input wrapper-->
+          </div>
+          <br>
+          <br>
+          <br>
+          <!--end::Col-->
+          <div class="col-md-12 fv-row mt-5">
+            <!--begin::Label-->
+            <label
+              class="d-flex align-items-center fs-6 fw-bold form-label mb-2"
+            >
+            <span class="required">회원님 평점</span>
+            </label>
+            <!--end::Label-->
+            <!--begin::Input wrapper-->
+            <div class="position-relative">
+              <!--begin::Input-->
+              <div class="form-group">
+                <fieldset class="starability-basic">
+                  <input type="radio" id="user_point" class="input-no-rate" name="rating" value="0" checked aria-label="No rating." />
+                  <input type="radio" id="first-rate1" name="rating" value="1" />
+                  <label for="first-rate1" title="Terrible">1 star</label>
+                  <input type="radio" id="first-rate2" name="rating" value="2" />
+                  <label for="first-rate2" title="Not good">2 stars</label>
+                  <input type="radio" id="first-rate3" name="rating" value="3" />
+                  <label for="first-rate3" title="Average">3 stars</label>
+                  <input type="radio" id="first-rate4" name="rating" value="4" />
+                  <label for="first-rate4" title="Very good">4 stars</label>
+                  <input type="radio" id="first-rate5" name="rating" value="5" />
+                  <label for="first-rate5" title="Amazing">5 stars</label>
+                </fieldset>
+
+                {% comment %} <select id = "user_point" name="pets" value = "" class="form-control mb-1">
+                  <option value=0>0점</option>
+                  <option value=0.5>0.5점</option>
+                  <option value=1>1점</option>
+                  <option value=1.5>1.5점</option>
+                  <option value=2>2점</option>
+                  <option value=2.5>2.5점</option>
+                  <option value=3>3점</option>
+                  <option value=3.5>3.5점</option>
+                  <option value=4>4점</option>
+                  <option value=4.5>4.5점</option>
+                  <option value=5>5점</option>
+                  
+
+              </select> {% endcomment %}
+
+              </div>
+              <!--end::Input-->
+            </div>
+            <!--begin::Label-->
+            <label
+              class="d-flex align-items-center fs-6 fw-bold form-label mb-2"
+            >
+            <span class="required">회원님 코멘트</span>
+            </label>
+            <!--end::Label-->
+            <!--begin::Input wrapper-->
+            <div class="position-relative">
+              <!--begin::Input-->
+              <div class="form-group">
+                <textarea id = "user_comment" class="form-control" rows = "5" placeholder="수업준비에 도움이 될&#10;좋았던 점/아쉬웠던 점/요청사항 등을&#10;자유롭게 적어주세요"></textarea>
+             </div>
+              <!--end::Input-->
+            </div>
+            
+            <div class="col-md-12" style = "text-align:center">
+              <button type="button" id = "ajax" class="btn contact_btn btn-large btn-purple btn-rounded mt-4" "id="ajax">피드백 남기기</button>
+            </div>  
+            <br>
+            <p style = "text-align:center">회원님께서 피드백을 작성해주시면, <br>트레이너님의 회원님의 다음번 수업 준비에 큰 도움이 됩니다</p>
+            <!--end::Input wrapper-->
+          </div>
+          <!--end::Col-->
+
+
+        
+       
+      </div>
+
+
+    </div>
+
+ 
+  </section>
+
+
+
+
+
+
+</body>
+
+  
+<style>
+  .slick-slide {
+    width: 400px;
+}
+</style>
+<script>
+  $(document).ready(function () {
+
+
+      $("#ajax").click(function (e) {
+        e.preventDefault();
+        
+  
+          var formData = new FormData();
+          formData.append("user_point", $('input[name="rating"]:checked').val());
+          formData.append("user_comment", $("#user_comment").val ());
+          var url = "/api/feedBack/user/" + {{feedBack.id}} + "/";
+          custom_token = "Token " +  "{{request.session.token}}";
+          header = {"Authorization": custom_token};
+          $.ajax({
+            type: "POST",
+            url: url,
+            headers: header,
+            data: formData,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (result) {
+              alert("피드백 제출이 완료 되었습니다");
+    
+    
+            },
+            error: function (result) {
+              alert("오류가 발생했습니다");
+            },
+          });
+       
+  
+       
+      });
+
+      },
+    );
+  
+</script>
+
+<script type="text/javascript">
+  Kakao.Link.createDefaultButton({
+    container: '#create-kakao-link-btn',
+    objectType: 'feed',
+    content: {
+      title: '강한 남자를 위한 앱 - 포텐셜',
+      description: '#AI기반 체성분 분석 서비스',
+      imageUrl:
+        'http://potentialai.com/static/potential/img/kakao.jpg',
+      link: {
+        mobileWebUrl: 'http://potentialai.com',
+        androidExecutionParams: 'test',
+      },
+    },
+    social: {
+      likeCount: 286,
+      commentCount: 45,
+      sharedCount: 845,
+    },
+    buttons: [
+      {
+        title: '체험하기',
+        link: {
+          mobileWebUrl: 'http://potentialai.com/predict',
+        },
+      },
+      {
+        title: '앱으로 보기',
+        link: {
+          mobileWebUrl: 'http://potentialai.com/predict',
+          androidExecutionParams: 'test',
+          iosExecutionParams: 'test',
+          
+        },
+      },
+    ],
+  })
+</script>
+
+
+
+{% endblock %}
