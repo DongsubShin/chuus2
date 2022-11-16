@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-!9jq$&otyzms7zg=+9%^$h6muy%7nw_k18jog=aw-f0n!7zj@u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['bestplayodds.com/', 'localhost:8000']
+ALLOWED_HOSTS = [*]
 
 
 # Application definition
