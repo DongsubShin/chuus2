@@ -13,8 +13,8 @@ apt-get install -y python3.9-dev python3.9-venv sqlite python3-pip supervisor ng
 
 
 # Create project directory
-# mkdir -p $PROJECT_BASE_PATH
-# git clone $PROJECT_GIT_URL $PROJECT_BASE_PATH
+mkdir -p $PROJECT_BASE_PATH
+git clone $PROJECT_GIT_URL $PROJECT_BASE_PATH
 
 mkdir -p $PROJECT_BASE_PATH/logs
 # Create virtual environment
