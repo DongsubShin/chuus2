@@ -1316,9 +1316,7 @@ svg.slider-shape {
 .team-detail {
     position: relative;
     width: 100%;
-    max-width: 250px;
     margin: 0 auto;
-    margin-bottom: -78px;
     background: #fff;
     padding-top: 20px;
     overflow: hidden;
