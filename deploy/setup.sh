@@ -9,7 +9,7 @@ PROJECT_BASE_PATH='/usr/local/apps/pably'
 
 echo "Installing dependencies..."
 apt-get update
-apt-get install -y python3.9-dev  python3.10-venv sqlite python3-pip supervisor nginx git libgl1-mesa-glx
+apt-get install -y python3.10-dev  python3.10-venv sqlite python3-pip supervisor nginx git libgl1-mesa-glx
 
 
 # Create project directory
