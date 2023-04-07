@@ -1174,7 +1174,7 @@ header a.logo img {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    min-height: 50vh;
+    min-height: 100vh;
     padding: 0;
     background: url("../img/slider-bg.jpg");
     padding-top: 40px;
@@ -1316,7 +1316,10 @@ svg.slider-shape {
 .team-detail {
     position: relative;
     width: 100%;
+    max-width: 250px;
     margin: 0 auto;
+    top: -78px;
+    margin-bottom: -78px;
     background: #fff;
     padding-top: 20px;
     overflow: hidden;
@@ -2642,7 +2645,7 @@ select.inputerror {
     }
 
     .team-item {
-        margin-top: 6rem;
+        margin-top: 4rem;
     }
 
     .about-list li {
@@ -2691,7 +2694,7 @@ select.inputerror {
 @media screen and (max-width:767px) {
 
     section {
-        padding: 2.5rem 0;
+        padding: 4.5rem 0;
     }
 
     .home-banner {
@@ -2730,7 +2733,7 @@ select.inputerror {
     }
 
     .heading-box h2 {
-        font-size: 2.0rem;
+        font-size: 2.3rem;
         line-height: 1.1;
     }
 

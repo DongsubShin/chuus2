@@ -1,5 +1,5 @@
 {% extends 'base.html'%} 
-{% block page_title %}W88{% endblock %}
+{% block page_title %}포텐셜{% endblock %}
 {% load static %} {% block pagecontent %}
 <body data-spy="scroll" data-target=".navbar" data-offset="90">
 
@@ -33,6 +33,7 @@
                       <a class="nav-link active scroll" href="#home">Home</a>
                       <a class="nav-link scroll" href="#about">About</a>
                       
+                      <a class="nav-link scroll" href="#contact">Apply</a>
                   </div>
               </div>
   
@@ -58,7 +59,12 @@
                       <li class="nav-item">
                           <a class="nav-link scroll" href="#about">About</a>
                       </li>
-                      
+                      <li class="nav-item">
+                          <a class="nav-link scroll" href="#blog">Blog</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link scroll" href="#contact">Contact</a>
+                      </li>
                   </ul>
               </nav>
   
@@ -68,7 +74,7 @@
                       <li><a class="instagram-text-hvr" href="javascript:void(0)"><i class="fab fa-instagram"></i> </a> </li>
                       <li><a class="twitter-text-hvr" href="javascript:void(0)"><i class="fab fa-twitter"></i> </a> </li>
                   </ul>
-                  <p class="text-white">&copy; 2022 W88. Made With Love by Themesindustry</p>
+                  <p class="text-white">&copy; 2023 Pably</p>
               </div>
           </div>
       </div>
@@ -82,25 +88,38 @@
   <section id="home" class="home-banner">
       <div class="container">
           <div class="row align-items-lg-center">
-              <div class="col-lg-8">
+              <div class="col-lg-6">
                   <!-- Box Area -->
                   <div class="heading-box">
-                    </b></p>
+                    <p style = "font-size:20px">Do you have instagram followers?</p>
                     <h2>
                         
-                        <b>W88 전세계 최고의 <br>온라인 스포츠 배팅 사이트</b></h2>
+                        <b>MONTHLY<br> INCOME <span class="main-color">₱ 10,000</span> </b></h2>
+                        <p><span class="main-color">Pably</span> 
+                            is an e-commerce platform for Filipino influencers<br> who love Korean fashion styles."
+                        </p>
+                        <a href="javascript:void(0);" class="btn btn-large btn-rounded btn-purple mr-2 mt-2">Apply</a>
+                      <a href="javascript:void(0);" class="btn btn-large btn-rounded btn-transparent-black mt-2">Learn More</a> 
                   </div>
               </div>
   
-               <!-- Features Box-->
-            <div class="col-lg-4">
-                <!--About Image-->
-                <div class="about-image">
-                    <a href = "https://m.w88win.com/pwa/web/#/?affiliateID=108857">
-                    <img src="{% static 'studio/img/bg_1.jpg' %}" alt="about-img" style = "width:100%">
-                    </a>
-                </div>
-            </div>
+              <div class="col-lg-6">
+                  <div class="slider-right">
+                      <svg class="slider-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700">
+                          <g>
+                              <path data-depth="0.05" id="shape-1" fill="#a07bf7" d="M355.43 45.1C398 31.19 442.59 29 484 39.88c55.11 14.5 117.25 54.91 134.57 160.78 0 0 18.6 99.41-12.78 232 0 0-38.65 142.61-90.66 192 0 0-59 61.95-148.78 59.18 0 0-42.15 0-102.34-27.17 0 0-184-88.78-240.17-199S11 211.81 150.69 135.43C241.1 86 314.73 58.41 355.43 45.1z" opacity=".25"/>
+                              <path data-depth="0.07" id="shape-2" fill="#a07bf7" d="M105.78 387.15c-15.76-38.08-21-79.83-14.15-120.46C100.79 212.61 133 148.14 228 116.38c0 0 89-32 211.88-21.76 0 0 132.5 15.66 181.18 57.51 0 0 60.65 46.59 64.69 131.66 0 0 3.11 39.73-17.22 100.45 0 0-67.27 186.43-163.35 255.44S282.55 687.58 202.89 567c-51.57-78-82.04-143.42-97.11-179.85z" opacity=".25"/>
+                              <path data-depth="0.09" id="shape-3" fill="#a07bf7" d="M112.59 129.56c18.72-39.73 47.85-73.83 84.82-97.56 49.2-31.55 123.12-52.4 216.29-.29 0 0 89.1 47.22 169.11 151.43 0 0 82.67 115.68 84.6 184.07 0 0 6.77 81.22-57.4 145.42 0 0-29.09 30.94-91.54 58.46 0 0-195.21 80.68-318.52 54.43S2.54 484.38 40.43 335.12C65 238.51 94.68 167.58 112.59 129.56z" opacity=".25"/>
+                              <path id="shape-4" d="M129.39 153.77C146.74 117 173.73 85.35 208 63.38c45.59-29.25 114.09-48.57 200.42-.28 0 0 82.56 43.75 156.7 140.31 0 0 76.61 107.2 78.4 170.57 0 0 6.27 75.26-53.19 134.75 0 0-27 28.67-84.82 54.17 0 0-180.89 74.76-295.15 50.43S27.41 482.55 62.52 344.24c22.74-89.52 50.27-155.24 66.87-190.47z" opacity="0"/>
+                              <clipPath id="shape-img">
+                                  <use xlink:href="#shape-4"  style="overflow:visible;"/>
+                              </clipPath>
+                          </g>
+                          <!--Change Image path here-->
+                          <image data-depth="0.1" clip-path="url(#shape-img)" height="100%" width="100%" xlink:href="{% static 'studio/img/slider-img.jpg' %}" />
+                      </svg>
+                  </div>
+              </div>
           </div>
       </div>
   </section>
@@ -111,39 +130,27 @@
         <div class="row dot-box" style = "align-items:center; justify-content=center">
 
             <!-- Heading Area-->
-            <div class="col-lg-12 order-lg-2" >
+            <div class="col-lg-6 order-lg-2" >
               
                 <div class="heading-area pl-lg-4 p-0">
-                    <h6 class="sub-title main-color"><b>W88 어떤 곳인가요?</b></h6>
-                    <h2 class="title" ><b>W88의 장점</b></h2>
+                    <h6 class="sub-title main-color"><b>Do you have followers more than 1K?</b></h6>
+                    <h2 class="title" ><b>You can apply <br>PABLY now!</b></h2>
                     <!--List-->
                     <p>
-                        W88 은 2014 년에 한국 서비스를 시작하였으며 19-20 EPL 울버햄튼 원더러스의 메인스폰서, 19-20
-레스터시티와의 파트너쉽 계약을 하며 세계적으로 이름을 알리기 시작했으며, 현재는 22-23 풀럼
-FC 의 메인스폰서 및 아르헨티나 축구 협회의 아시아 지역 파트너로 활동하고 있습니다. 스포츠
-배팅, 라이브 딜러 카지노, 슬롯, P2P(포커, 슈퍼볼), 키노등의 혁신적인 배팅 시스템을 통해 한발
-앞선 기술이 적용된 최고의 게임과 최고의 서비스를 제공하여 급변하고 있는 아시아 게임 시장의
-유행을 선도하는 해외 배팅사이트 입니다.
-                        <br><br> 
-                        필리핀 정부의 엄격한 심사를 통해 라이센스를 취득하여 합법적으로 운영중인 해외 배팅
-사이트이며 한국 서비스를 시작한 뒤 한글화된 사이트, 한국어로 상담이 가능한 친절한 고객 센터,
-간편한 가입과 원화 (KRW)거래가 가능하다는 장점이 있습니다. W88 카지노에는 1000 개이상의
-화려한 그래픽과 우수한 게임성을 자랑하는 다수의 슬롯 게임이 매력적이며 신규게임,이색게임,
-인기게임등 유저들이 좀 더 이용하기 쉽도록 알기 쉬운 플랫폼으로 구성되어있습니다.
-라이브카지노는 바카라, 룰렛, 블랙잭, 식보등을 제공 하며 마이크로 게이밍 슬롯게임의 잭팟
-당첨의 행운도 경험해보시기바랍니다.
-                        <br><br>                        
-                        <b><a href = "https://m.w88win.com/pwa/web/#/?affiliateID=108857">W88 우회주소</a></b> 
-                        <br><br>
-                        국내 접속시 유해차단으로 접속이 안되는 경우가 있는데 <a href = "https://m.w88win.com/pwa/web/#/?affiliateID=108857">W88 우회주소</a>로 접속해주시기 바랍니다.
- 
-
+                      PABLY is a platform that connects influencers and your fan. You can easily sell clothing with PABLY
                     </p>
                     
                    
                 </div>
             </div>
 
+            <!-- Features Box-->
+            <div class="col-lg-6">
+                <!--About Image-->
+                <div class="about-image">
+                    <img src="{% static 'studio/img/section1.png' %}" alt="about-img" style = "width:100%">
+                </div>
+            </div>
 
         </div>
 
@@ -157,12 +164,17 @@ FC 의 메인스폰서 및 아르헨티나 축구 협회의 아시아 지역 파
         <div class="row dot-box" style = "align-items:center; justify-content=center">
 
             <!-- Heading Area-->
-            <div class="col-lg-6" >
+            <div class="col-lg-6 " >
               
                 <div class="heading-area pl-lg-4 p-0">
-                    <h6 class="sub-title main-color"><b>W88의 이벤트</b></h6>
-                    <h2 class="title" ><b>리뷰 프로모션도<br>만나보세요</b></h2>
-            
+                    <h6 class="sub-title main-color"><b>No need to buy products, Shipping, CS</b></h6>
+                    <h2 class="title" ><b>Just upload your images to <span class = "main-color">PABLY</span></b></h2>
+                    <!--List-->
+                    <p>
+                      Just focus on taking pretty picture of yourself <br>
+                      PABLY cares all annoying stuffs.
+                    </p>
+                    
                    
                 </div>
             </div>
@@ -171,9 +183,7 @@ FC 의 메인스폰서 및 아르헨티나 축구 협회의 아시아 지역 파
             <div class="col-lg-6">
                 <!--About Image-->
                 <div class="about-image">
-                    <a href = "https://m.w88win.com/pwa/web/#/?affiliateID=108857">
-                    <img src="{% static 'studio/img/bg_2.jpg' %}" alt="about-img" style = "width:100%">
-                    </a>
+                    <img src="{% static 'studio/img/section2.png' %}" alt="about-img" style = "width:100%">
                 </div>
             </div>
 
@@ -181,103 +191,269 @@ FC 의 메인스폰서 및 아르헨티나 축구 협회의 아시아 지역 파
 
     </div>
    </section>
-   <section id="portfolio" class="cube-portfolio1 text-center no-transition">
-    <div class="container">
-        
-        <!--Heading-->
-        <div class="heading-area pb-lg-5">
-            <h3><b>Sexy Calendar</b></h3>
-            <a href = "https://m.w88win.com/pwa/web/#/?affiliateID=108857">
-            <img style = "width:100%"" src = "{% static 'studio/img/sexy_calendar.png' %}">
-            </a>
-        </div>
-  
-  
-    </div>
-  </section>
-  <section id="portfolio" class="cube-portfolio1 text-center no-transition">
-    <div class="container">
-        <!--Heading-->
-        <div class="heading-area pb-lg-5">
-            <img style = "width:100%"" src = "{% static 'studio/img/bg_3.jpg' %}">
-        </div>
-        <div class="row row-1 no-gutters">
-            <div class="col-lg-12 col-md-12 col-sm-12 heading-col text-center wow fadeIn" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: fadeIn;">
-               <h5 class="subheading ">국내은행 계좌사용 및 가상화폐 사용으로 안전한 입출금 시스템
-                </h5>
-               <h2 class="heading"><B>W88 입금 방법 안내</b></h2>
-            </div>
-         </div>
-       <p style = "margin-top:30px">
-        W88에 돈을 입금하는 것은 월드컵 경기 배팅이나 온라인 카지노 게임에 참여할 수 있는 첫 번째 단계입니다. 이는 간단해 보이지만 온라인 베팅을 처음 접하는 이용자들에게는 어렵기 때문에 W88 계정에 입금하는 2가지 방법을 따라주세요.
-        <br><br><br>
-        <a href = "https://m.w88win.com/pwa/web/#/?affiliateID=108857"><b>W88 링크 모바일</b></a><br>
-        <a href = "https://m.w88win.com/pwa/web/#/?affiliateID=108857"><b>W88 링크 데스크탑</b></a><br><br>
-     </p>
-     <h3 style = "text-align:left">방법 1:  고객센터를 통해 신분증과 계좌사본 제출</h3>
-     <p style = "text-align:left; margin-top:10px">
-        저희 사이트는 해외 정부의 라이센스를 받아 운영 중인 해외 베팅 사이트로 모든 신규 회원은 입금 시 신분증과 계좌 사본을 통한 본인 확인 절차를 거치셔야만 이용하실 수 있습니다. 
-        카카오톡 : w88kr (친구 추가 -> ID로 추가, 사칭 채널 주의) 또는 라인 : w88korea를 추가하셔서 제출 및 문의해 주시면 되시고, 승인은 제출 후 최대 24시간 소요됩니다.
-     </p>
-     <h3 style = "text-align:left">방법 2:  가상화폐 계정 등록 후 바로 입금하기</h3>
-     <p style = "text-align:left; margin-top:10px">
-        가상화폐 (BUSD, USDT ERC20, USDT TRC20)를 통한 입출금 시 위의 단계는 생략되며, 가상 화폐 계정 추가 후 바로 입금 가능합니다.
-     </p>
-     
-    </div>
-  </section>
+  <!--About End-->
 
-  <section id="team">
+  <section id="about3">
     <div class="container">
-        <h3 style = "text-align:left"> 
-            가상화폐 계정 등록하는 가장 쉬운 3 단계
-        </h3>
-     
-        <div class="row mt-lg-5 pt-lg-5">
-            <div class="col-lg-4 col-md-6">
-               <div class="team-item">
-                   <img src="{% static 'studio/img/crypto1.png' %}" alt="team">
-                   <div class="team-detail">
-                       <p class="m-0">1. Crypto 아이콘을 클릭해주세요.</p>                       
-                   </div>
-               </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="team-item">
-                    <img src="{% static 'studio/img/crypto2.png' %}" alt="team">
-                    <div class="team-detail">
-                        <p class="m-0">2. 본 아이디와 비슷한 별도의 ID 를 만들어주세요.
-                        </p>
-                    </div>
+        <div class="row dot-box" style = "align-items:center; justify-content=center">
+
+            <!-- Heading Area-->
+            <div class="col-lg-6 order-lg-2" >
+              
+                <div class="heading-area pl-lg-4 p-0">
+                    <h6 class="sub-title main-color"><b>In less than 1 day</b></h6>
+                    <h2 class="title" ><b>Your <span class = "main-color">Own Shop</span><br> is Ready</b></h2>
+                    <!--List-->
+                    <p>
+                      Let's start your own business with PABLY <br>
+                      Tell your fans about your store and start selling
+                    </p>
+                    
+                   
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="team-item">
-                    <img src="{% static 'studio/img/crypto3.png' %}" alt="team">
-                    <div class="team-detail">
-                        <p class="m-0">3. 선호하는 거래소 선택 후, 쉽게 입출금 및 이용이 가능합니다. </p>
-                    </div>
+
+            <!-- Features Box-->
+            <div class="col-lg-6">
+                <!--About Image-->
+                <div class="about-image">
+                    <img src="{% static 'studio/img/section3.png' %}" alt="about-img" style = "width:100%">
                 </div>
             </div>
+
         </div>
+
     </div>
-</section>
-<section id="portfolio" class="cube-portfolio1 text-center no-transition">
-    <div class="container">
+   </section>
+  <!--About End-->
+  {% comment %} <!--About Star-->
+  <section id="about2">
+      <div class="container">
+          <div class="row dot-box">
   
-        <!--Heading-->
-        <div class="heading-area mx-570 pb-lg-5">
-            <h6 class="sub-title main-color">카타르 월드컵 죽음의 H조 경기 배팅하고 싶다면</h6>
-            <h2 class="title"><b><a href = "https://m.w88win.com/pwa/web/#/?affiliateID=108857">W88 우회주소</a>로<br> 접속해주시기 바랍니다.</b></h2>
-            <p>W88 사이트 입출금 관련 문의사항이 있으시면 24시간 대기중인 <br>카카오톡 : <b>w88kr</b> 또는 라인 : <b>w88korea</b>를 추가하셔서 문의 해주세요.</p>
-            
-            <a href = "https://m.w88win.com/pwa/web/#/?affiliateID=108857
-">            <img src="{% static 'studio/img/bg_4.jpg' %}" alt="about-img" style = "width:100%"> </a>   <!--Portfolio Filters-->
-        </div>
+              <!-- Heading Area-->
+              <div class="col-lg-6 order-lg-2">
+                  <div class="heading-area pl-lg-4 p-0">
+                      <h6 class="sub-title main-color">복사 붙여넣기를 한 듯한 똑같은 이력서</h6>
+                      <h2 class="title"><b>혹시 강사님의 이력서<br>이런 내용이지 않나요?</b></h2>
+                      <!--List-->
+                      <p>수 백만원을 들였지만<br>내 실력을 보여주지 못하는 자격증와 세미나들.</p>
+                      <p>더이상 협회의 상술에 속지 마세요.</p>
+                      <p>나의 실력을 제대로 보여 줄 수 있는 <br>새로운 방법을 소개 합니다.</p>
+                  </div>
+              </div>
   
+              <!-- Features Box-->
+              <div class="col-lg-6">
+                  <!--About Image-->
+                  <div class="about-image">
+                      <img src="{% static 'studio/img/about-img.png' %}" alt="about-img" style = "width:80%">
+                  </div>
+              </div>
   
-    </div>
+          </div>
+  
+      </div>
   </section>
+  <!--About End--> {% endcomment %}
+  <section class="about-section" id="about">
+    <div class="container">
+       <!-- row-1 -->
+       <div class="row row-1 no-gutters">
+          <div class="col-lg-12 col-md-12 col-sm-12 heading-col text-center wow fadeIn" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: fadeIn;">
+             <h5 class="subheading ">E-commerce for influencers</h5>
+             <h2 class="heading"><B>Welcome to PABLY</b></h2>
+          </div>
+       </div>
+       <!-- Row-3 -->
+       <div class="row row-2 no-gutters yoga-services">
+          <div class="col-lg-3 col-md-0 col-sm-0"></div>
+          <div class="col-lg-6 col-md-12 col-sm-12 text-center">
+             <div class="img-col wow fadeInDown" data-wow-delay="400ms" style="text-align:center; visibility: visible; animation-delay: 400ms; animation-name: fadeInDown;">
+                <img src="{% static 'studio/img/mockup.png' %}" alt="img" >
+             </div>
+          </div>
+          <div class="col-lg-3 col-md-0 col-sm-0"></div>
+       </div>
+       <!-- Row-3 -->
+       <div class="row row-3 no-gutters yoga-services">
+          <div class="col-lg-3 col-md-12 col-sm-12 wow fadeInLeft" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: fadeInLeft;">
+             <div class="service text-center">
+                <h2 class="heading">01.</h2>
+                <h5 class="subheading">Just take pictures.</h5>
+                <p class="text">We take care of everything(Buying, Shipping, CS, Payment) you need to do to start your online business.</p>
+             </div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12"></div>
+          <div class="col-lg-3 col-md-12 col-sm-12 wow fadeInRight" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: fadeInRight;">
+             <div class="service text-center">
+                <h2 class="heading">02.</h2>
+                <h5 class="subheading">Upload images to PABLY</h5>
+                <p class="text">Just upload images to PABLY  </p>
+             </div>
+          </div>
+       </div>
+       <!-- Row-4 -->
+       <div class="row row-4 no-gutters yoga-services">
+          <div class="col-lg-3 col-md-12 col-sm-12">
+            <div class="service text-center">
+              <h2 class="heading">03.</h2>
+              <h5 class="subheading">Your own shop is created</h5>
+              <p class="text">
+                Tell your fans about your store and start selling</p>
+           </div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 wow fadeInUp" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: fadeInUp;">
+            
+          </div>
+          <div class="col-lg-3 col-md-12 col-sm-12">
+            <div class="service text-center">
+              <h2 class="heading">04.</h2>
+              <h5 class="subheading">Monthly Passive Income</h5>
+              <p class="text">Influencers in PABLY gets about ₱ 10000 in average</p>
+           </div>
+          </div>
+       </div>
+    </div>
+    <!-- Container End -->
+ </section>
+
+ <section id="portfolio" class="cube-portfolio1 text-center no-transition">
+  <div class="container">
+
+      <!--Heading-->
+      <div class="heading-area pb-lg-5">
+          <h6 class="sub-title main-color">WITH PABLY</h6>
+          <h2 class="title"><b>We help Filipino <span class = "main-color">influencers </span> <br> easily start online <span class = "main-color">businesses</span></b></h2>
+
+          <!--Portfolio Filters-->
+          </p>
+      </div>
+
+
+  </div>
+</section>
+  <!--Parallax Start-->
+  {% comment %} <section class="parallax bg-img1">
+      <div class="bg-overlay bg-main opacity-7"></div>
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-3 col-sm-6">
+                  <div class="parallax-box text-white">
+                      <i class="fa fa-check" aria-hidden="true"></i>
+                      <h2 class="count">1800</h2>
+                      <h5>Project Completed</h5>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                  <div class="parallax-box text-white">
+                      <i class="fa fa-flag" aria-hidden="true"></i>
+                      <h2 class="count">125</h2>
+                      <h5>Total Countries</h5>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                  <div class="parallax-box text-white">
+                      <i class="fa fa-globe" aria-hidden="true"></i>
+                      <h2 class="count">5500</h2>
+                      <h5>Users Worldwide</h5>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                  <div class="parallax-box text-white">
+                      <i class="fa fa-gift" aria-hidden="true"></i>
+                      <h2 class="count">17</h2>
+                      <h5>Award Winners</h5>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section> {% endcomment %}
+  <!--Parallax End-->
+  
+ 
+   
+  <!-- Client start -->
+  <section id="client" class="parallax bg-img2" style="">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-6 offset-lg-6 wow fadeInRight">
+                  <div class="owl-carousel owl-theme testimonial-two">
+                      <div class="testimonial-item">
+                          <p >"I earned 10,000 pesos in the first month." </p>
+  
+                          <div class="testimonial-post">
+                              <a href="javascript:void(0)" class="post"><img src="{% static 'studio/img/testimonial-1.jpg' %}" alt="image"></a>
+                              <div class="text-content">
+                                  <h5>Kathy J.</h5>
+                                  <p class="mb-0">Fashion Influencer, Follower 5K</p>
+                                  <div class="rating">
+                                      <i class="lni-star-filled"></i>
+                                      <i class="lni-star-filled"></i>
+                                      <i class="lni-star-filled"></i>
+                                      <i class="lni-star-filled"></i>
+                                      <i class="lni-star-filled"></i>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="testimonial-item">
+                        <p >"I earned 30,000 pesos in the first month." </p>
+
+                        <div class="testimonial-post">
+                            <a href="javascript:void(0)" class="post"><img src="{% static 'studio/img/testimonial-2.jpg' %}" alt="image"></a>
+                            <div class="text-content">
+                                <h5>Jessica</h5>
+                                <p class="mb-0">Vlogger, Tiktok, Follower 5K</p>
+                                <div class="rating">
+                                    <i class="lni-star-filled"></i>
+                                    <i class="lni-star-filled"></i>
+                                    <i class="lni-star-filled"></i>
+                                    <i class="lni-star-filled"></i>
+                                    <i class="lni-star-filled"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- Client ends -->
+  
+  
+  <!--Contact Start-->
+  <section id="contact">
+      <div class="container">
+        <div class="heading-area pb-lg-5 text-center">
+            <h2 class="title"><b>Apply <span class = "main-color">Now </span> <br>Opportunity is waiting for you</b></h2>
+  
+            <!--Portfolio Filters-->
+            </p>
+        </div>
+  
+          <!--contact us-->
+          <form class="contact-form" id="contact-form-data">
+              <div class="row">
+  
+                  <div class="col-sm-12" id="result"></div>
+  
+                  <div class="col-md-12 col-sm-12">
+                      <div class="form-group">
+                          <input class="form-control" type="email" placeholder="E-mail" required="" id="email" name="userEmail">
+                      </div>
+                  </div>
+                  <div class="col-sm-12">
+                      <button type="button" class="btn contact_btn btn-large btn-purple btn-rounded mt-4" id="ajax">Apply</button>
+                  </div>
+              </div>
+          </form>
+      </div>
+  </section>
+  <!--Contact End-->
+  
   <!--Footer Start-->
   <footer class="footer-style-1 bg-light">
       <div class="container">
@@ -303,7 +479,7 @@ FC 의 메인스폰서 및 아르헨티나 축구 협회의 아시아 지역 파
               </div>
               <!--Text-->
               <div class="col-lg-6 text-lg-right">
-                  <p class="company-about fadeIn">© 2022 W88. Made With Love By <a href="javascript:void(0);">Themesindustry</a>
+                  <p class="company-about fadeIn">© 2023 PABLY.
                   </p>
               </div>
           </div>
@@ -314,6 +490,42 @@ FC 의 메인스폰서 및 아르헨티나 축구 협회의 아시아 지역 파
 
 
 </body>  
+
+<script>
+    $(document).ready(function () {
+  
+      $("#ajax").click(function (e) {
+        e.preventDefault();
+          
+            var formData = new FormData();
+            formData.append("email", $("#email").val());
+         
+            $.ajax({
+              type: "POST",
+              url: "/api/earlyBird/",
+              data: formData,
+              cache: false,
+              contentType: false,
+              processData: false,
+              success: function (result) {
+            
+            alert("제출이 완료 되었습니다");
+            console.log(result);
+            
+                      
+      
+              },
+              error: function (result) {
+                console.log(result);
+                alert("제출에 실패했습니다.");
+              },
+          })
+    
+        })
+    
+    
+    });
+  </script>
 
 
 {% endblock %}

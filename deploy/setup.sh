@@ -3,9 +3,9 @@
 set -e
 
 # TODO: Set to URL of git repo.
-PROJECT_GIT_URL='https://github.com/DongsubShin/w88.git'
+PROJECT_GIT_URL='https://github.com/DongsubShin/pably.git'
 
-PROJECT_BASE_PATH='/usr/local/apps/w88'
+PROJECT_BASE_PATH='/usr/local/apps/pably'
 
 echo "Installing dependencies..."
 apt-get update
