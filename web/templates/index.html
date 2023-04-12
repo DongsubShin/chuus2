@@ -443,7 +443,7 @@
   
                   <div class="col-md-12 col-sm-12">
                       <div class="form-group">
-                          <input class="form-control" type="text" placeholder="Instagram Account" required="" id="email" name="userEmail">
+                          <input class="form-control" type="text" placeholder="Instagram Account" required="" id="instagram" name="instagram">
                       </div>
                   </div>
                   <div class="col-sm-12">
@@ -489,7 +489,7 @@
         e.preventDefault();
           
             var formData = new FormData();
-            formData.append("email", $("#email").val());
+            formData.append("instagram", $("#instagram").val());
          
             $.ajax({
               type: "POST",
