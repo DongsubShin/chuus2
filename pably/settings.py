@@ -27,8 +27,8 @@ SECRET_KEY = 'django-insecure-!9jq$&otyzms7zg=+9%^$h6muy%7nw_k18jog=aw-f0n!7zj@u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'bestplayodds.com', '*']
-
+ALLOWED_HOSTS = ['localhost', '3.39.189.222']
+CSRF_TRUSTED_ORIGINS = ['3.39.189.222']
 
 # Application definition
 
@@ -45,11 +45,11 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    # 'django.middleware.security.SecurityMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.csrf.CsrfViewMiddleware',
-    # 'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
