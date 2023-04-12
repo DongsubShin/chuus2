@@ -16,7 +16,10 @@ import json
 from rest_framework import status
 import requests
 
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
 
+@method_decorator(csrf_exempt, name='dispatch')
 class EarlyBirdViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.EarlyBirdSerializer
     queryset = models.EarlyBird.objects.all()
