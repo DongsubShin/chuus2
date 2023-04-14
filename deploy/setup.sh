@@ -13,7 +13,7 @@ apt-get install -y python3.10-dev  python3.10-venv sqlite python3-pip supervisor
 
 
 # Create project directory
-mkdir -p $PROJECT_BASE_PATH
+# mkdir -p $PROJECT_BASE_PATH
 git clone $PROJECT_GIT_URL $PROJECT_BASE_PATH
 
 mkdir -p $PROJECT_BASE_PATH/logs
