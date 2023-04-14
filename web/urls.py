@@ -6,6 +6,7 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     path('', views.HomePageView.as_view(), name='home'),
+    path('privacy', views.PrivacyPageView.as_view(), name='privacy'),
     
 ]
 
