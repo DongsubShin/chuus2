@@ -2,7 +2,7 @@
 
 set -e
 
-PROJECT_BASE_PATH='/usr/local/apps/pably'
+PROJECT_BASE_PATH='/usr/local/apps/chuus'
 
 git pull
 

@@ -3,9 +3,9 @@
 set -e
 
 # TODO: Set to URL of git repo.
-PROJECT_GIT_URL='https://github.com/DongsubShin/pably.git'
+PROJECT_GIT_URL='https://github.com/DongsubShin/chuus.git'
 
-PROJECT_BASE_PATH='/usr/local/apps/pably'
+PROJECT_BASE_PATH='/usr/local/apps/chuus'
 
 echo "Installing dependencies..."
 apt-get update
