@@ -131,6 +131,8 @@ AUTHENTICATION_BACKENDS = (
 
 )
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 
 
 SOCIAL_AUTH_FACEBOOK_KEY = "182677494182914"
