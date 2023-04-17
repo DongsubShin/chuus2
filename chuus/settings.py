@@ -54,8 +54,8 @@ AUTH_USER_MODEL = 'api.User'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '3.39.189.222', 'chuus.me']
-CSRF_TRUSTED_ORIGINS = ['http://3.39.189.222', 'http://chuus.me']
+ALLOWED_HOSTS = ['localhost', '54.151.240.215', 'chuus.me']
+CSRF_TRUSTED_ORIGINS = ['http://54.151.240.215', 'http://chuus.me']
 
 
 # Application definition
@@ -162,10 +162,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
 
-SOCIAL_AUTH_FACEBOOK_KEY = "182677494182914"
-SOCIAL_AUTH_FACEBOOK_SECRET = "35709b495c5997e97c44b4c1b1305570"
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = "your_google_clientId"
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = "your_google_clientsecret"
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
