@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+# set -e
 
 PROJECT_BASE_PATH='/usr/local/apps/chuus'
 
