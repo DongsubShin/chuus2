@@ -6,3 +6,4 @@ djangorestframework==3.12.4
 social-auth-app-django
 django-quill-editor
 django-allauth
+boto3
