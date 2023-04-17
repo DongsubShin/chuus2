@@ -67,6 +67,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    'django_quill',
     'api',
     'influencer',
     'web',
@@ -77,7 +79,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.facebook',
     'storages',
     'corsheaders',
-    'django_quill',
 
 ]
 
