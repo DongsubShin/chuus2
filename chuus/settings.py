@@ -1,5 +1,8 @@
 import os
-
+from pathlib import Path
+import environ
+import os
+import json
 """
 Django settings for chuus project.
 
@@ -17,12 +20,36 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+secret_file = os.path.join(BASE_DIR, 'secrets.json')
 
+with open(secret_file) as f:
+    secrets = json.loads(f.read())
+
+def get_secret(setting, secrets=secrets):
+    try:
+        return secrets[setting]
+    except KeyError:
+        error_msg = "Set the {} environment variable".format(setting)
+        raise ImproperlyConfigured(error_msg)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-!9jq$&otyzms7zg=+9%^$h6muy%7nw_k18jog=aw-f0n!7zj@u'
+SECRET_KEY = get_secret("SECRET_KEY")
+SOCIAL_AUTH_FACEBOOK_KEY = get_secret("SOCIAL_AUTH_FACEBOOK_KEY")  # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = get_secret("SOCIAL_AUTH_FACEBOOK_SECRET") #app key
+
+AWS_ACCESS_KEY_ID = get_secret('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = get_secret('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = 'chuus'
+AWS_S3_REGION_NAME = 'ap-southeast-1'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+AWS_S3_VERIFY = True
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage' 
+
+
+AUTH_USER_MODEL = 'api.User'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -30,9 +57,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['localhost', '3.39.189.222', 'chuus.me']
 CSRF_TRUSTED_ORIGINS = ['http://3.39.189.222', 'http://chuus.me']
 
-LOGIN_URL = 'login'
-LOGOUT_URL = 'logout'
-LOGIN_REDIRECT_URL = 'home'
 
 # Application definition
 
@@ -46,12 +70,18 @@ INSTALLED_APPS = [
     'api',
     'influencer',
     'web',
+    'dashboard',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
+    'storages',
+    'corsheaders',
+    'django_quill',
 
 ]
+
+AUTH_USER_MODEL = 'api.User'
 SITE_ID = 1
 
 SOCIALACCOUNT_PROVIDERS = \
@@ -76,9 +106,6 @@ SOCIALACCOUNT_PROVIDERS = \
         'VERIFIED_EMAIL': False,
         'VERSION': 'v2.4'}}
 
-#facebook
-SOCIAL_AUTH_FACEBOOK_KEY = '182677494182914'  # App ID
-SOCIAL_AUTH_FACEBOOK_SECRET ='35709b495c5997e97c44b4c1b1305570' #app key
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -187,10 +214,15 @@ STATICFILES_DIRS=[
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
 
+LOGOUT_REDIRECT_URL = '/influencer/home'
 LOGIN_REDIRECT_URL = '/influencer/home'  # Or whatever you want to redirect to after email verification
-ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_LOGOUT_ON_GET = True
-# ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
-ACCOUNT_USERNAME_REQUIRED = False    # This removes the username field
+SOCIALACCOUNT_LOGIN_ON_GET = True
+
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'

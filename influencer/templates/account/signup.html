@@ -2,6 +2,8 @@
 {% block page_title %}chuus, E-commerce for Influencers{% endblock %}
 {% load static %} 
 {% block pagecontent %}
+{% load socialaccount %}
+{% providers_media_js %}
 
 <main class="main pages">
     <div class="page-header breadcrumb-wrap">
@@ -71,7 +73,7 @@
                         </div>
                         <div class="col-lg-6 pr-30 d-none d-lg-block">
                             <div class="card-login mt-115">
-                                <a href="#" class="social-login facebook-login">
+                                <a href='{% provider_login_url "facebook" method="js_sdk" %}' class="social-login facebook-login">
                                     <img src="{% static 'assets/imgs/theme/icons/logo-facebook.svg' %}" alt="" />
                                     <span>Continue with Facebook</span>
                                 </a>

@@ -1,0 +1,525 @@
+{% extends 'web_base.html'%} 
+{% block page_title %}chuus, E-commerce for Influencers{% endblock %}
+{% load static %} {% block pagecontent %}
+<body data-spy="scroll" data-target=".navbar" data-offset="90">
+
+  <!-- Preloader -->
+  <div class="preloader">
+      <div class="centrize full-width">
+          <div class="vertical-center">
+              <div class="spinner">
+                  <div class="double-bounce1"></div>
+                  <div class="double-bounce2"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Preloader End -->
+  
+  <!--Header Start-->
+  <header>
+  
+      <!--Navigation-->
+      <nav class="navbar navbar-top-default navbar-expand-lg navbar-simple nav-line">
+          <div class="container">
+              <a href="#home" title="Logo" class="logo scroll">
+                  <!--Logo Default-->
+                  <img src="{% static 'studio/img/logo.png' %}" alt="logo" class="logo-dark">
+              </a>
+  
+              <!--Nav Links-->
+              <div class="collapse navbar-collapse" id="megaone">
+                  <div class="navbar-nav ml-auto">
+                      <a class="nav-link active scroll" href="#home">Home</a>
+                      <a class="nav-link scroll" href="#about">About</a>
+                      
+                      <a class="nav-link scroll" href="#contact">Apply</a>
+                  </div>
+              </div>
+  
+              <!--Side Menu Button-->
+              <a href="javascript:void(0)" class="sidemenu_btn" id="sidemenu_toggle">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </a>
+  
+          </div>
+      </nav>
+  
+      <!--Side Nav-->
+      <div class="side-menu hidden">
+          <div class="inner-wrapper">
+              <span class="btn-close" id="btn_sideNavClose"><i></i><i></i></span>
+              <nav class="side-nav w-100">
+                  <ul class="navbar-nav">
+                      <li class="nav-item">
+                          <a class="nav-link scroll" href="#home">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link scroll" href="#about">About</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link scroll" href="#blog">Blog</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link scroll" href="#contact">Contact</a>
+                      </li>
+                  </ul>
+              </nav>
+  
+              <div class="side-footer text-white w-100">
+                  <ul class="social-icons-simple">
+                      <li><a class="facebook-text-hvr" href="javascript:void(0)"><i class="fab fa-facebook-f"></i> </a> </li>
+                      <li><a class="instagram-text-hvr" href="javascript:void(0)"><i class="fab fa-instagram"></i> </a> </li>
+                      <li><a class="twitter-text-hvr" href="javascript:void(0)"><i class="fab fa-twitter"></i> </a> </li>
+                  </ul>
+                  <p class="text-white">&copy; 2023 chuus</p>
+              </div>
+          </div>
+      </div>
+      <a id="close_side_menu" href="javascript:void(0);"></a>
+      <!-- End side menu -->
+  
+  </header>
+  <!--Header End-->
+  
+  <!--Home Start-->
+  <section id="home" class="home-banner">
+      <div class="container">
+          <div class="row align-items-lg-center">
+              <div class="col-lg-6">
+                  <!-- Box Area -->
+                  <div class="heading-box">
+                    <p style = "font-size:20px">Do you have followers?</p>
+                    <h2>
+                        
+                        <b>MONTHLY<br> INCOME <span class="main-color">₱ 10,000</span> </b></h2>
+                        <p><span class="main-color">chuus</span> 
+                            is an e-commerce platform for Filipino influencers<br> who love Korean fashion styles."
+                        </p>
+                        <a href="javascript:void(0);" class="btn btn-large btn-rounded btn-purple mr-2 mt-2">Apply</a>
+                      <a href="javascript:void(0);" class="btn btn-large btn-rounded btn-transparent-black mt-2">Learn More</a> 
+                  </div>
+              </div>
+  
+              <div class="col-lg-6">
+                  <div class="slider-right">
+                      <svg class="slider-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700">
+                          <g>
+                              <path data-depth="0.05" id="shape-1" fill="#a07bf7" d="M355.43 45.1C398 31.19 442.59 29 484 39.88c55.11 14.5 117.25 54.91 134.57 160.78 0 0 18.6 99.41-12.78 232 0 0-38.65 142.61-90.66 192 0 0-59 61.95-148.78 59.18 0 0-42.15 0-102.34-27.17 0 0-184-88.78-240.17-199S11 211.81 150.69 135.43C241.1 86 314.73 58.41 355.43 45.1z" opacity=".25"/>
+                              <path data-depth="0.07" id="shape-2" fill="#a07bf7" d="M105.78 387.15c-15.76-38.08-21-79.83-14.15-120.46C100.79 212.61 133 148.14 228 116.38c0 0 89-32 211.88-21.76 0 0 132.5 15.66 181.18 57.51 0 0 60.65 46.59 64.69 131.66 0 0 3.11 39.73-17.22 100.45 0 0-67.27 186.43-163.35 255.44S282.55 687.58 202.89 567c-51.57-78-82.04-143.42-97.11-179.85z" opacity=".25"/>
+                              <path data-depth="0.09" id="shape-3" fill="#a07bf7" d="M112.59 129.56c18.72-39.73 47.85-73.83 84.82-97.56 49.2-31.55 123.12-52.4 216.29-.29 0 0 89.1 47.22 169.11 151.43 0 0 82.67 115.68 84.6 184.07 0 0 6.77 81.22-57.4 145.42 0 0-29.09 30.94-91.54 58.46 0 0-195.21 80.68-318.52 54.43S2.54 484.38 40.43 335.12C65 238.51 94.68 167.58 112.59 129.56z" opacity=".25"/>
+                              <path id="shape-4" d="M129.39 153.77C146.74 117 173.73 85.35 208 63.38c45.59-29.25 114.09-48.57 200.42-.28 0 0 82.56 43.75 156.7 140.31 0 0 76.61 107.2 78.4 170.57 0 0 6.27 75.26-53.19 134.75 0 0-27 28.67-84.82 54.17 0 0-180.89 74.76-295.15 50.43S27.41 482.55 62.52 344.24c22.74-89.52 50.27-155.24 66.87-190.47z" opacity="0"/>
+                              <clipPath id="shape-img">
+                                  <use xlink:href="#shape-4"  style="overflow:visible;"/>
+                              </clipPath>
+                          </g>
+                          <!--Change Image path here-->
+                          <image data-depth="0.1" clip-path="url(#shape-img)" height="100%" width="100%" xlink:href="{% static 'studio/img/slider-img.jpg' %}" />
+                      </svg>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!--Home End-->
+   <!--About Star-->
+   <section id="about2">
+    <div class="container">
+        <div class="row dot-box" style = "align-items:center; justify-content=center">
+
+            <!-- Heading Area-->
+            <div class="col-lg-6 order-lg-2" >
+              
+                <div class="heading-area pl-lg-4 p-0">
+                    <h6 class="sub-title main-color">If you have more than 1K Followers</h6>
+                    <h2 class="title" ><b>Apply now!</b></h2>
+                    <!--List-->
+                    <p>
+                     You can make ₱ 10,000 monthly in average. <br>
+                      chuus is a platform that connects influencers and your fan. <br>You can easily sell clothing with chuus
+                    </p>
+                    
+                   
+                </div>
+            </div>
+
+            <!-- Features Box-->
+            <div class="col-lg-6">
+                <!--About Image-->
+                <div class="about-image">
+                    <img src="{% static 'studio/img/section1.png' %}" alt="about-img" style = "width:100%">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+   </section>
+  <!--About End-->
+  <!--Home End-->
+   <!--About Star-->
+   <section id="about2">
+    <div class="container">
+        <div class="row dot-box" style = "align-items:center; justify-content=center">
+
+            <!-- Heading Area-->
+            <div class="col-lg-6 " >
+              
+                <div class="heading-area pl-lg-4 p-0">
+                    <h6 class="sub-title main-color"><b>No need to buy products, Shipping, CS</b></h6>
+                    <h2 class="title" ><b>Just upload your images to <span class = "main-color">chuus</span></b></h2>
+                    <!--List-->
+                    <p>
+                      Just focus on taking pretty picture of yourself <br>
+                      chuus takes care of all annoying stuffs.
+                    </p>
+                    
+                   
+                </div>
+            </div>
+
+            <!-- Features Box-->
+            <div class="col-lg-6">
+                <!--About Image-->
+                <div class="about-image">
+                    <img src="{% static 'studio/img/section2.png' %}" alt="about-img" style = "width:100%">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+   </section>
+  <!--About End-->
+
+  <section id="about3">
+    <div class="container">
+        <div class="row dot-box" style = "align-items:center; justify-content=center">
+
+            <!-- Heading Area-->
+            <div class="col-lg-6 order-lg-2" >
+              
+                <div class="heading-area pl-lg-4 p-0">
+                    <h6 class="sub-title main-color"><b>In less than 1 day</b></h6>
+                    <h2 class="title" ><b>Your <span class = "main-color">Own Shop</span><br> is Ready</b></h2>
+                    <!--List-->
+                    <p>
+                      Let's start your own business with chuus <br>
+                      Tell your fans about your store and start selling
+                    </p>
+                    
+                   
+                </div>
+            </div>
+
+            <!-- Features Box-->
+            <div class="col-lg-6">
+                <!--About Image-->
+                <div class="about-image">
+                    <img src="{% static 'studio/img/section3.png' %}" alt="about-img" style = "width:100%">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+   </section>
+  <!--About End-->
+  {% comment %} <!--About Star-->
+  <section id="about2">
+      <div class="container">
+          <div class="row dot-box">
+  
+              <!-- Heading Area-->
+              <div class="col-lg-6 order-lg-2">
+                  <div class="heading-area pl-lg-4 p-0">
+                      <h6 class="sub-title main-color">복사 붙여넣기를 한 듯한 똑같은 이력서</h6>
+                      <h2 class="title"><b>혹시 강사님의 이력서<br>이런 내용이지 않나요?</b></h2>
+                      <!--List-->
+                      <p>수 백만원을 들였지만<br>내 실력을 보여주지 못하는 자격증와 세미나들.</p>
+                      <p>더이상 협회의 상술에 속지 마세요.</p>
+                      <p>나의 실력을 제대로 보여 줄 수 있는 <br>새로운 방법을 소개 합니다.</p>
+                  </div>
+              </div>
+  
+              <!-- Features Box-->
+              <div class="col-lg-6">
+                  <!--About Image-->
+                  <div class="about-image">
+                      <img src="{% static 'studio/img/about-img.png' %}" alt="about-img" style = "width:80%">
+                  </div>
+              </div>
+  
+          </div>
+  
+      </div>
+  </section>
+  <!--About End--> {% endcomment %}
+  <section class="about-section" id="about">
+    <div class="container">
+       <!-- row-1 -->
+       <div class="row row-1 no-gutters">
+          <div class="col-lg-12 col-md-12 col-sm-12 heading-col text-center wow fadeIn" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: fadeIn;">
+             <h5 class="subheading ">E-commerce for influencers</h5>
+             <h2 class="heading"><B>Welcome to chuus</b></h2>
+          </div>
+       </div>
+       <!-- Row-3 -->
+       <div class="row row-2 no-gutters yoga-services">
+          <div class="col-lg-3 col-md-0 col-sm-0"></div>
+          <div class="col-lg-6 col-md-12 col-sm-12 text-center">
+             <div class="img-col wow fadeInDown" data-wow-delay="400ms" style="text-align:center; visibility: visible; animation-delay: 400ms; animation-name: fadeInDown;">
+                <img src="{% static 'studio/img/mockup.png' %}" alt="img" >
+             </div>
+          </div>
+          <div class="col-lg-3 col-md-0 col-sm-0"></div>
+       </div>
+       <!-- Row-3 -->
+       <div class="row row-3 no-gutters yoga-services">
+          <div class="col-lg-3 col-md-12 col-sm-12 wow fadeInLeft" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: fadeInLeft;">
+             <div class="service text-center">
+                <h2 class="heading">01.</h2>
+                <h5 class="subheading">Just take pictures.</h5>
+                <p class="text">We take care of everything(Buying, Shipping, CS, Payment) you need to do to start your online business.</p>
+             </div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12"></div>
+          <div class="col-lg-3 col-md-12 col-sm-12 wow fadeInRight" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: fadeInRight;">
+             <div class="service text-center">
+                <h2 class="heading">02.</h2>
+                <h5 class="subheading">Upload images to chuus</h5>
+                <p class="text">Just upload images to chuus  </p>
+             </div>
+          </div>
+       </div>
+       <!-- Row-4 -->
+       <div class="row row-4 no-gutters yoga-services">
+          <div class="col-lg-3 col-md-12 col-sm-12">
+            <div class="service text-center">
+              <h2 class="heading">03.</h2>
+              <h5 class="subheading">Your own shop is created</h5>
+              <p class="text">
+                Tell your fans about your store and start selling</p>
+           </div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 wow fadeInUp" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: fadeInUp;">
+            
+          </div>
+          <div class="col-lg-3 col-md-12 col-sm-12">
+            <div class="service text-center">
+              <h2 class="heading">04.</h2>
+              <h5 class="subheading">Monthly Passive Income</h5>
+              <p class="text">Influencers in chuus gets about ₱ 10000 in average</p>
+           </div>
+          </div>
+       </div>
+    </div>
+    <!-- Container End -->
+ </section>
+
+ <section id="portfolio" class="cube-portfolio1 text-center no-transition">
+  <div class="container">
+
+      <!--Heading-->
+      <div class="heading-area pb-lg-5">
+          <h6 class="sub-title main-color">WITH chuus</h6>
+          <h2 class="title"><b>We help you to start <br><span class = "main-color">Online business</span>  with few clicks</b></h2>
+
+          <!--Portfolio Filters-->
+          </p>
+      </div>
+
+
+  </div>
+</section>
+  <!--Parallax Start-->
+  {% comment %} <section class="parallax bg-img1">
+      <div class="bg-overlay bg-main opacity-7"></div>
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-3 col-sm-6">
+                  <div class="parallax-box text-white">
+                      <i class="fa fa-check" aria-hidden="true"></i>
+                      <h2 class="count">1800</h2>
+                      <h5>Project Completed</h5>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                  <div class="parallax-box text-white">
+                      <i class="fa fa-flag" aria-hidden="true"></i>
+                      <h2 class="count">125</h2>
+                      <h5>Total Countries</h5>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                  <div class="parallax-box text-white">
+                      <i class="fa fa-globe" aria-hidden="true"></i>
+                      <h2 class="count">5500</h2>
+                      <h5>Users Worldwide</h5>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                  <div class="parallax-box text-white">
+                      <i class="fa fa-gift" aria-hidden="true"></i>
+                      <h2 class="count">17</h2>
+                      <h5>Award Winners</h5>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section> {% endcomment %}
+  <!--Parallax End-->
+  
+ 
+   
+  <!-- Client start -->
+  <section id="client" class="parallax bg-img2" style="">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-6 offset-lg-6 wow fadeInRight">
+                  <div class="owl-carousel owl-theme testimonial-two">
+                      <div class="testimonial-item">
+                          <p >"Thanks to chuus, I was able to start an online business. chuus took care of purchasing, customer service, and shipping, so I was able to focus on the products." </p>
+  
+                          <div class="testimonial-post">
+                              <a href="javascript:void(0)" class="post"><img src="{% static 'studio/img/testimonial-1.jpg' %}" alt="image"></a>
+                              <div class="text-content">
+                                  <h5>Kathy J.</h5>
+                                  <p class="mb-0">Fashion Influencer, Follower 5K</p>
+                                  <div class="rating">
+                                      <i class="lni-star-filled"></i>
+                                      <i class="lni-star-filled"></i>
+                                      <i class="lni-star-filled"></i>
+                                      <i class="lni-star-filled"></i>
+                                      <i class="lni-star-filled"></i>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="testimonial-item">
+                        <p >"I earned 30,000 pesos in the first month. Thanks to chuus, I could find job I love" </p>
+
+                        <div class="testimonial-post">
+                            <a href="javascript:void(0)" class="post"><img src="{% static 'studio/img/testimonial-2.jpg' %}" alt="image"></a>
+                            <div class="text-content">
+                                <h5>Jessica</h5>
+                                <p class="mb-0">Vlogger, Tiktok, Follower 5K</p>
+                                <div class="rating">
+                                    <i class="lni-star-filled"></i>
+                                    <i class="lni-star-filled"></i>
+                                    <i class="lni-star-filled"></i>
+                                    <i class="lni-star-filled"></i>
+                                    <i class="lni-star-filled"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- Client ends -->
+  
+  
+  <!--Contact Start-->
+  <section id="contact">
+      <div class="container">
+        <div class="heading-area pb-lg-5 text-center">
+            <h2 class="title"><b>Apply <span class = "main-color">Now </span> <br>Opportunity is waiting for you</b></h2>
+            <p>
+             Please Send Us Your Instagram Account. We Will Contact You Soon.
+            </p>
+        </div>
+  
+          <!--contact us-->
+          <form class="contact-form" id="contact-form-data">
+              <div class="row">
+  
+                  <div class="col-sm-12" id="result"></div>
+                   
+                  
+                  <div class="col-md-12 col-sm-12">
+                      <div class="form-group">
+                          <input class="form-control" type="text" placeholder="Instagram Account" required="" id="instagram" name="instagram">
+                      </div>
+                  </div>
+                  <div class="col-sm-12">
+                      <button type="button" class="btn contact_btn btn-large btn-purple btn-rounded mt-4" id="ajax">Apply</button>
+                  </div>
+              </div>
+          </form>
+      </div>
+  </section>
+  <!--Contact End-->
+  
+  <!--Footer Start-->
+  <footer class="footer-style-1 bg-light">
+      <div class="container">
+          <div class="row align-items-center">
+              <!--Social-->
+              <div class="col-lg-6">
+                  <div class="footer-social text-lg-left">
+                      <ul class="list-unstyled">
+                          <li><a class="wow fadeInUp" href="https://www.instagram.com/chuus.ph/"><i aria-hidden="true"
+                                                                                    class="fab fa-instagram"></i></a></li>
+                       </ul>
+                  </div>
+              </div>
+              <!--Text-->
+              <div class="col-lg-6 text-lg-right">
+                  <p class="company-about fadeIn">© 2023 chuus. 21, Baekbeom-ro 31-gil, Mapo-gu, Seoul, Republic of Korea
+                  </p>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <!--Footer End-->
+  
+
+
+</body>  
+
+<script>
+    $(document).ready(function () {
+  
+      $("#ajax").click(function (e) {
+        e.preventDefault();
+          
+            var formData = new FormData();
+
+            formData.append("instagram", $("#instagram").val());
+         
+            $.ajax({
+              type: "POST",
+              url: "/api/earlyBird/",
+              data: formData,
+              cache: false,
+              contentType: false,
+              processData: false,
+              success: function (result) {
+            
+            alert("Apply Confirmed :)");
+            console.log(result);
+            
+                      
+      
+              },
+              error: function (result) {
+                console.log(result);
+                alert("Apply failed :(");
+              },
+          })
+    
+        })
+    
+    
+    });
+  </script>
+
+
+{% endblock %}
+

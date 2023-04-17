@@ -1,0 +1,407 @@
+{% extends 'dashboard/base.html'%}
+{% block page_title %}CHUUS 관리자 페이지{% endblock %}
+{% load static %} 
+
+{% block pagecontent %}
+
+<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed aside-enabled aside-fixed">
+  <!--begin::Main-->
+  <!--begin::Root-->
+  <div class="d-flex flex-column flex-root">
+    <!--begin::Page-->
+    <div class="page d-flex flex-row flex-column-fluid">
+      {% include "dashboard/side.html" %}
+      <!--begin::Wrapper-->
+      <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+        <!--begin::Header-->
+        <div id="kt_header" style="" class="header align-items-stretch">
+          <!--begin::Container-->
+          <div class="container-fluid d-flex align-items-stretch justify-content-between">
+            <!--begin::Aside mobile toggle-->
+            <div class="d-flex align-items-center d-lg-none ms-n2 me-2" title="Show aside menu">
+              <div class="btn btn-icon btn-active-light-primary w-30px h-30px w-md-40px h-md-40px" id="kt_aside_mobile_toggle">
+                <!--begin::Svg Icon | path: icons/duotune/abstract/abs015.svg-->
+                <span class="svg-icon svg-icon-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M21 7H3C2.4 7 2 6.6 2 6V4C2 3.4 2.4 3 3 3H21C21.6 3 22 3.4 22 4V6C22 6.6 21.6 7 21 7Z" fill="currentColor"></path>
+                    <path opacity="0.3" d="M21 14H3C2.4 14 2 13.6 2 13V11C2 10.4 2.4 10 3 10H21C21.6 10 22 10.4 22 11V13C22 13.6 21.6 14 21 14ZM22 20V18C22 17.4 21.6 17 21 17H3C2.4 17 2 17.4 2 18V20C2 20.6 2.4 21 3 21H21C21.6 21 22 20.6 22 20Z" fill="currentColor"></path>
+                  </svg>
+                </span>
+                <!--end::Svg Icon-->
+              </div>
+            </div>
+            <!--end::Aside mobile toggle-->
+            <!--begin::Mobile logo-->
+            <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
+              <a href="../../demo1/dist/index.html" class="d-lg-none">
+                <img alt="Logo" src="{% static 'metronic/media/logos/logo-2.svg' %}" class="h-30px">
+              </a>
+            </div>
+            <!--end::Mobile logo-->
+            <!--begin::Wrapper-->
+            <div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1">
+              <!--begin::Navbar-->
+              <div class="d-flex align-items-center" id="kt_header_nav">
+                <!--begin::Page title-->
+                <div data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_header_nav'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
+                  <!--begin::Title-->
+                  <h1 class="d-flex text-dark fw-bolder fs-3 align-items-center my-1">Home</h1>
+                  <!--end::Title-->
+                  <!--begin::Separator-->
+                  <span class="h-20px border-gray-300 border-start mx-4"></span>
+                  <!--end::Separator-->
+                  <!--begin::Breadcrumb-->
+                  <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-muted">
+                      <a href="../../demo1/dist/index.html" class="text-muted text-hover-primary">Home</a>
+                    </li>
+                    <!--end::Item-->
+
+                  </ul>
+                  <!--end::Breadcrumb-->
+                </div>
+                <!--end::Page title-->
+              </div>
+              <!--end::Navbar-->
+              <!--begin::Toolbar wrapper-->
+              <div class="d-flex align-items-stretch flex-shrink-0">
+                {% include "dashboard/profile.html" %}
+              </div>
+              <!--end::Toolbar wrapper-->
+            </div>
+            <!--end::Wrapper-->
+          </div>
+          <!--end::Container-->
+        </div>
+        <!--end::Header-->
+        <!--begin::Content-->
+        <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+          <!--begin::Post-->
+          <div class="post d-flex flex-column-fluid" id="kt_post">
+            <!--begin::Container-->
+            <div id="kt_content_container" class="container-xxl">
+              <!--begin::Row-->
+             </div>
+  
+{% comment %} <script>
+  var element = document.getElementById('kt_apexcharts_bodylog');
+
+  var height = parseInt(KTUtil.css(element, 'height'));
+  var labelColor = KTUtil.getCssVariableValue('--bs-gray-500');
+  var borderColor = KTUtil.getCssVariableValue('--bs-gray-200');
+  var baseColor = KTUtil.getCssVariableValue('--bs-info');
+  var lightColor = KTUtil.getCssVariableValue('--bs-light-info');
+  
+  
+  var options = {
+      series: [{
+          name: '주간 인바디 내역',
+          data: [{{week_bodylogs_array.5}}, {{week_bodylogs_array.4}}, {{week_bodylogs_array.3}}, {{week_bodylogs_array.2}}, {{week_bodylogs_array.1}}, {{week_bodylogs_array.0}}]
+      }],
+      chart: {
+          fontFamily: 'inherit',
+          type: 'area',
+          height: height,
+          toolbar: {
+              show: false
+          }
+      },
+      plotOptions: {
+  
+      },
+      legend: {
+          show: false
+      },
+      dataLabels: {
+          enabled: false
+      },
+      fill: {
+          type: 'solid',
+          opacity: 1
+      },
+      stroke: {
+          curve: 'smooth',
+          show: true,
+          width: 3,
+          colors: [baseColor]
+      },
+      xaxis: {
+          categories: ['5주 전', '4주 전', '3주 전', '2주 전', '1주 전', '현재'],
+          axisBorder: {
+              show: false,
+          },
+          axisTicks: {
+              show: false
+          },
+          labels: {
+              style: {
+                  colors: labelColor,
+                  fontSize: '12px'
+              }
+          },
+          crosshairs: {
+              position: 'front',
+              stroke: {
+                  color: baseColor,
+                  width: 1,
+                  dashArray: 3
+              }
+          },
+          tooltip: {
+              enabled: true,
+              formatter: undefined,
+              offsetY: 0,
+              style: {
+                  fontSize: '12px'
+              }
+          }
+      },
+      yaxis: {
+          labels: {
+              style: {
+                  colors: labelColor,
+                  fontSize: '12px'
+              }
+          }
+      },
+      states: {
+          normal: {
+              filter: {
+                  type: 'none',
+                  value: 0
+              }
+          },
+          hover: {
+              filter: {
+                  type: 'none',
+                  value: 0
+              }
+          },
+          active: {
+              allowMultipleDataPointsSelection: false,
+              filter: {
+                  type: 'none',
+                  value: 0
+              }
+          }
+      },
+      tooltip: {
+          style: {
+              fontSize: '12px'
+          },
+          y: {
+              formatter: function (val) {
+                  return val + ' 건'
+              }
+          }
+      },
+      colors: [lightColor],
+      grid: {
+          borderColor: borderColor,
+          strokeDashArray: 4,
+          yaxis: {
+              lines: {
+                  show: true
+              }
+          }
+      },
+      markers: {
+          strokeColor: baseColor,
+          strokeWidth: 3
+      }
+  };
+  
+  var chart = new ApexCharts(element, options);
+  chart.render();
+</script>
+
+<script>
+  var element = document.getElementById('kt_apexcharts_user');
+
+  var height = parseInt(KTUtil.css(element, 'height'));
+  var labelColor = KTUtil.getCssVariableValue('--bs-gray-500');
+  var borderColor = KTUtil.getCssVariableValue('--bs-gray-200');
+  var baseColor = KTUtil.getCssVariableValue('--bs-info');
+  var lightColor = KTUtil.getCssVariableValue('--bs-light-info');
+  
+  
+  var options = {
+      series: [{
+          name: '주간 유저 가입 내역',
+          data: [{{week_users_array.5}}, {{week_users_array.4}}, {{week_users_array.3}}, {{week_users_array.2}}, {{week_users_array.1}}, {{week_users_array.0}}]
+     
+      }],
+      chart: {
+          fontFamily: 'inherit',
+          type: 'area',
+          height: height,
+          toolbar: {
+              show: false
+          }
+      },
+      plotOptions: {
+  
+      },
+      legend: {
+          show: false
+      },
+      dataLabels: {
+          enabled: false
+      },
+      fill: {
+          type: 'solid',
+          opacity: 1
+      },
+      stroke: {
+          curve: 'smooth',
+          show: true,
+          width: 3,
+          colors: [baseColor]
+      },
+      xaxis: {
+        categories: ['5주 전', '4주 전', '3주 전', '2주 전', '1주 전', '현재'],
+
+          axisBorder: {
+              show: false,
+          },
+          axisTicks: {
+              show: false
+          },
+          labels: {
+              style: {
+                  colors: labelColor,
+                  fontSize: '12px'
+              }
+          },
+          crosshairs: {
+              position: 'front',
+              stroke: {
+                  color: baseColor,
+                  width: 1,
+                  dashArray: 3
+              }
+          },
+          tooltip: {
+              enabled: true,
+              formatter: undefined,
+              offsetY: 0,
+              style: {
+                  fontSize: '12px'
+              }
+          }
+      },
+      yaxis: {
+          labels: {
+              style: {
+                  colors: labelColor,
+                  fontSize: '12px'
+              }
+          }
+      },
+      states: {
+          normal: {
+              filter: {
+                  type: 'none',
+                  value: 0
+              }
+          },
+          hover: {
+              filter: {
+                  type: 'none',
+                  value: 0
+              }
+          },
+          active: {
+              allowMultipleDataPointsSelection: false,
+              filter: {
+                  type: 'none',
+                  value: 0
+              }
+          }
+      },
+      tooltip: {
+          style: {
+              fontSize: '12px'
+          },
+          y: {
+              formatter: function (val) {
+                  return val + ' 건'
+              }
+          }
+      },
+      colors: [lightColor],
+      grid: {
+          borderColor: borderColor,
+          strokeDashArray: 4,
+          yaxis: {
+              lines: {
+                  show: true
+              }
+          }
+      },
+      markers: {
+          strokeColor: baseColor,
+          strokeWidth: 3
+      }
+  };
+  
+  var chart = new ApexCharts(element, options);
+  chart.render();
+</script>
+
+<script>
+  var element = document.getElementById('kt_apexcharts_user_pie');
+
+  var height = parseInt(KTUtil.css(element, 'height'));
+  var labelColor = KTUtil.getCssVariableValue('--bs-gray-500');
+  var borderColor = KTUtil.getCssVariableValue('--bs-gray-200');
+  var baseColor = KTUtil.getCssVariableValue('--bs-info');
+  var lightColor = KTUtil.getCssVariableValue('--bs-light-info');
+
+  options = {
+    series: [{{bodylog0_users}}, {{bodylog1_users}}, {{bodylog2_users}}, {{bodylog3_users}}],
+    labels: ['0회', '1회', '2회', '3회 이상'],
+    chart: {
+      fontFamily: 'inherit',
+      type: 'donut',
+      height: height,
+      toolbar: {
+          show: false
+      }
+    },
+    plotOptions: {
+      pie: {
+        size: 200
+      }
+    },
+    stroke: {
+      show: true,
+      curve: 'smooth',
+      lineCap: 'butt',
+      colors: undefined,
+      width: 2,
+      dashArray: 0,      
+    },
+    legend: {
+      show: true,
+      position: 'bottom',
+      horizontalAlign: 'center', 
+      floating: false,
+      fontSize: '12px',
+      fontWeight: 400,
+      inverseOrder: false,
+      offsetX: 0,
+      offsetY: 0,
+      labels: {
+          colors: '#fff',
+          useSeriesColors: false
+      },
+    }
+  }
+  var chart = new ApexCharts(element, options);
+  chart.render();
+
+</script> {% endcomment %}
+
+{% endblock %}

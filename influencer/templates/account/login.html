@@ -2,6 +2,7 @@
 {% block page_title %}chuus, E-commerce for Influencers{% endblock %}
 {% load static %} 
 {% block pagecontent %}
+{% load socialaccount %}
 
 <!--End header-->
 <main class="main pages">
@@ -38,7 +39,7 @@
                                             {{form.password}}
                                         </div>
                                         <div class= "card-login" style = "margin:0px; padding:0px; border: none">
-                                            <a href="#" class="social-login facebook-login">
+                                            <a href='{% provider_login_url "facebook" method="oauth2" %}' class="social-login facebook-login">
                                                 <img src="{% static 'assets/imgs/theme/icons/logo-facebook.svg' %}" alt="" />
                                                 <span>Continue with Facebook</span>
                                             </a>

@@ -1,0 +1,531 @@
+{% extends 'dashboard/base.html'%}
+{% block page_title %}AICDS 관리자 페이지{% endblock %}
+{% load static %}
+{% block pagecontent %}
+
+<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed aside-enabled aside-fixed">
+    <!--begin::Main-->
+    <!--begin::Root-->
+    <div class="d-flex flex-column flex-root">
+        <!--begin::Page-->
+        <div class="page d-flex flex-row flex-column-fluid">
+            {% include "dashboard/side.html" %}
+            <!--begin::Wrapper-->
+            <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+                <!--begin::Header-->
+                <div id="kt_header" style="" class="header align-items-stretch">
+                    <!--begin::Container-->
+                    <div class="container-fluid d-flex align-items-stretch justify-content-between">
+                        <!--begin::Aside mobile toggle-->
+                        <div class="d-flex align-items-center d-lg-none ms-n2 me-2" title="Show aside menu">
+                            <div class="btn btn-icon btn-active-light-primary w-30px h-30px w-md-40px h-md-40px"
+                                id="kt_aside_mobile_toggle">
+                                <!--begin::Svg Icon | path: icons/duotune/abstract/abs015.svg-->
+                                <span class="svg-icon svg-icon-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M21 7H3C2.4 7 2 6.6 2 6V4C2 3.4 2.4 3 3 3H21C21.6 3 22 3.4 22 4V6C22 6.6 21.6 7 21 7Z"
+                                            fill="currentColor"></path>
+                                        <path opacity="0.3"
+                                            d="M21 14H3C2.4 14 2 13.6 2 13V11C2 10.4 2.4 10 3 10H21C21.6 10 22 10.4 22 11V13C22 13.6 21.6 14 21 14ZM22 20V18C22 17.4 21.6 17 21 17H3C2.4 17 2 17.4 2 18V20C2 20.6 2.4 21 3 21H21C21.6 21 22 20.6 22 20Z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                </span>
+                                <!--end::Svg Icon-->
+                            </div>
+                        </div>
+                        <!--end::Aside mobile toggle-->
+                        <!--begin::Mobile logo-->
+                        <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
+                            <a href="../../demo1/dist/index.html" class="d-lg-none">
+                                <img alt="Logo" src="{% static 'metronic/media/logos/logo-2.svg' %}" class="h-30px">
+                            </a>
+                        </div>
+                        <!--end::Mobile logo-->
+                        <!--begin::Wrapper-->
+                        <div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1">
+                            <!--begin::Navbar-->
+                            <div class="d-flex align-items-center" id="kt_header_nav">
+                                <!--begin::Page title-->
+                                <div data-kt-swapper="true" data-kt-swapper-mode="prepend"
+                                    data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_header_nav'}"
+                                    class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
+                                    <!--begin::Title-->
+                                    <h1 class="d-flex text-dark fw-bolder fs-3 align-items-center my-1">유저 내역</h1>
+                                    <!--end::Title-->
+                                    <!--begin::Separator-->
+                                    <span class="h-20px border-gray-300 border-start mx-4"></span>
+                                    <!--end::Separator-->
+                                    <!--begin::Breadcrumb-->
+                                    <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
+                                        <!--begin::Item-->
+                                        <li class="breadcrumb-item text-muted">
+                                            <a href="../../demo1/dist/index.html"
+                                                class="text-muted text-hover-primary">Home</a>
+                                        </li>
+
+                                        <li class="breadcrumb-item">
+                                            <span class="bullet bg-gray-300 w-5px h-2px"></span>
+                                        </li>
+
+                                        <li class="breadcrumb-item text-dark">유저 내역</li>
+                                        <!--end::Item-->
+
+                                    </ul>
+                                    <!--end::Breadcrumb-->
+                                </div>
+                                <!--end::Page title-->
+                            </div>
+                            <!--end::Navbar-->
+                            
+                            <!--end::Toolbar wrapper-->
+                        </div>
+                        <!--end::Wrapper-->
+                    </div>
+                    <!--end::Container-->
+                </div>
+                <!--end::Header-->
+                <!--begin::Content-->
+                <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+                    <!--begin::Post-->
+                    <div class="post d-flex flex-column-fluid" id="kt_post">
+                        <!--begin::Container-->
+                        
+                        
+                        <div id="kt_content_container" class="container-xxl">
+                            <!--begin::Layout-->
+                                <!--begin::Sidebar-->
+                                <div class="row mb-10">
+                                    <!--begin::Card-->
+                                    <div class="card p-5 mb-5 mb-xl-8">
+                                        <div class="card-toolbar">
+                                       </div>
+                                   
+                                        <!--begin::Card body-->
+                                        <div class="card-body">
+                                                    <!--begin::Toolbar-->
+                                                    <div class="d-flex justify-content-end" data-kt-user-table-toolbar="base">
+                                                        <!--begin::Filter-->
+                                                        
+                                                        <!--begin::Add user-->
+                                                        <button type="button" style = "float:right"class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_change_password">
+                                                        <!--begin::Svg Icon | path: icons/duotune/arrows/arr075.svg-->
+                                                        
+                                                        <!--end::Svg Icon-->비밀번호 변경</button>
+                                                        <!--end::Add user-->
+                                                    </div>
+                                                    <!--end::Toolbar-->
+                                                    <!--begin::Modal - Add task-->
+                                                    <div class="modal fade" id="kt_modal_change_password" tabindex="-1" aria-hidden="true">
+                                                        <!--begin::Modal dialog-->
+                                                        <div class="modal-dialog modal-dialog-centered mw-650px">
+                                                            <!--begin::Modal content-->
+                                                            <div class="modal-content">
+                                                                <!--begin::Modal header-->
+                                                                <div class="modal-header" id="kt_modal_add_user_header">
+                                                                    <!--begin::Modal title-->
+                                                                    <h2 class="fw-bold">비밀번호 변경</h2>
+                                                                    <!--end::Modal title-->
+                                                                    
+                                                                </div>
+                                                                <!--end::Modal header-->
+                                                                <!--begin::Modal body-->
+                                                                <div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+                                                                    <!--begin::Form-->
+                                                                    <form id="kt_modal_change_password_form" class="form fv-plugins-bootstrap5 fv-plugins-framework" action="/dashboard/users/changePassword/{{user.id}}/" method="post">
+                                                                        <!--begin::Scroll-->
+                                                                        <div class="d-flex flex-column scroll-y me-n7 pe-7" id="kt_modal_add_user_scroll" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_modal_add_user_header" data-kt-scroll-wrappers="#kt_modal_add_user_scroll" data-kt-scroll-offset="300px" style="max-height: 61px;">
+                                                                           
+                                                                            <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                                                <!--begin::Label-->
+                                                                                <label class="required fw-semibold fs-6 mb-2">비밀번호</label>
+                                                                                <!--end::Label-->
+                                                                                <!--begin::Input-->
+                                                                                <input type="password" name="password" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="비밀번호를 입력해주세요" >
+                                                                                <!--end::Input-->
+                                                                            
+                                                                            
+                                                                                <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                                        
+                                                                                   <!--begin::Input group-->
+                                                                           
+                                                                            </div>
+                                                                        <!--end::Scroll-->
+                                                                        <!--begin::Actions-->
+                                                                        <div class="text-center pt-15">
+                                                                            <button type="reset" class="btn btn-light me-3" data-kt-users-modal-action="cancel"><a href="javascript:history.back()">취소</a></button>
+                                                                            <button type="submit" class="btn btn-primary" data-kt-users-modal-action="submit">
+                                                                                <span class="indicator-label">Submit</span>
+                                                                                <span class="indicator-progress">Please wait... 
+                                                                                <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                                                                            </button>
+                                                                        </div>
+                                                                        <!--end::Actions-->
+                                                                    </form>
+                                                                    <!--end::Form-->
+                                                                </div>
+                                                                <!--end::Modal body-->
+                                                            </div>
+                                                            <!--end::Modal content-->
+                                                        </div>
+                                                        <!--end::Modal dialog-->
+                                                    </div>
+                                                    <!--end::Modal - Add task-->
+                                             
+                                            <!--begin::Summary-->
+                                            <form id="kt_modal_add_user_form" class="form fv-plugins-bootstrap5 fv-plugins-framework" action="/dashboard/users/update/{{user.id}}/" method="post">
+                                                <!--begin::Scroll-->
+                                                <div class="row">
+                                                    
+                                                    <!--begin::Input group-->
+                                                    <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                        <!--begin::Label-->
+                                                        <label class="required fw-semibold fs-6 mb-2">이름</label>
+                                                        <!--end::Label-->
+                                                        <!--begin::Input-->
+                                                        <input type="text" name="name" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="홍길동" value = "{{user.name}}">
+                                                        <!--end::Input-->
+                                                    <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                    <!--end::Input group-->
+                                                    <!--begin::Input group-->
+                                                    <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                        <!--begin::Label-->
+                                                        <label class="required fw-semibold fs-6 mb-2">그룹</label>
+                                                        <!--end::Label-->
+                                                        <!--begin::Input-->
+                                                        <select name="group" class="form-select" aria-label="Default select example" >
+                                                            <option value="">그룹 없음</option>
+                                                                       
+                                                            {% for group in groups %}
+                                                                <option value="{{group.id}}" {% if user.group.id == group.id %} selected {% endif %}>{{group.name}}</option>
+                                                            {% endfor %}
+                                                        </select><!--end::Input-->
+                                                    <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                    <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                        <!--begin::Label-->
+                                                        <label class="required fw-semibold fs-6 mb-2">Email</label>
+                                                        <!--end::Label-->
+                                                        <!--begin::Input-->
+                                                        <input type="email" name="email" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="example@domain.com" value = "{{user.email}}">
+                                                        <!--end::Input-->
+                                                    
+                                                    
+                                                        <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                   
+                                                    
+                                                    
+                                                        <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                            <!--begin::Label-->
+                                                            <label class="required fw-semibold fs-6 mb-2">지역</label>
+                                                            <!--end::Label-->
+                                                            <!--begin::Input-->
+                                                            <input type="text" name="location" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="서울" value = "{{user.location}}">
+                                                            <!--end::Input-->
+                                                        
+                                                        
+                                                            <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                        
+                                                        <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                                <!--begin::Label-->
+                                                            <label class="required fw-semibold fs-6 mb-2">농장주소</label>
+                                                            <!--end::Label-->
+                                                            <!--begin::Input-->
+                                                            <input type="text" name="address" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="경기도 안성시 00면" value = "{{user.address}}">
+                                                            <!--end::Input-->
+                                                        
+                                                        
+                                                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                                                    
+                                                         </div>
+                                                        
+                                                            <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                                <!--begin::Label-->
+                                                            <label class="required fw-semibold fs-6 mb-2">사육두수</label>
+                                                            <!--end::Label-->
+                                                            <!--begin::Input-->
+                                                            <input type="number" name="cow_count" class="form-control form-control-solid mb-3 mb-lg-0" placeholder="0" value = "{{user.cow_count}}">
+                                                            <!--end::Input-->
+                                                        
+                                                        
+                                                            <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                       
+                                                            <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                                <!--begin::Label-->
+                                                                <label class="required fw-semibold fs-6 mb-2">농장종류</label>
+                                                                <!--end::Label-->
+                                                                <!--begin::Input-->
+                                                                <select name="category" class="form-select" aria-label="Default select example" >
+                                                                    <option value="비육" {% if user.category == "비육" %} selected {% endif %}>비육</option>
+                                                                    <option value="번식" {% if user.category == "번식" %} selected {% endif %}>번식</option>
+                                                                    <option value="일관사육" {% if user.category == "일관사육" %} selected {% endif %}>일관사육</option>
+                                                                    <option value="낙농" {% if user.category == "낙농" %} selected {% endif %}>낙농</option>
+                                                                </select><!--end::Input-->
+                                                            <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                        <!--begin::Input group-->
+                                                    <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                        <!--begin::Label-->
+                                                        <label class="required fw-semibold fs-6 mb-2">전화번호</label>
+                                                        <!--end::Label-->
+                                                        <!--begin::Input-->
+                                                        <input type="text" name="phone" class="form-control form-control-solid mb-3 mb-lg-0" value="{{user.phone}}" >
+                                                        <!--end::Input-->
+                                                    
+                                                    
+                                                        <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                   
+                                                        <!--end::Input group-->
+                                                   </div>
+                                                   <br>
+                                                <!--end::Scroll-->
+                                                <!--begin::Actions-->
+                                                <div class="text-center pt-15">
+                                                    <button type="reset" class="btn btn-light me-3" data-kt-users-modal-action="cancel"><a href="javascript:history.back()">취소</a></button>
+                                                    <button type="submit" class="btn btn-primary" data-kt-users-modal-action="submit">
+                                                        <span class="indicator-label">Submit</span>
+                                                        <span class="indicator-progress">Please wait... 
+                                                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                                                    </button>
+                                                </div>
+                                                <!--end::Actions-->
+                                            </form>
+                                            
+                                            <!--end::Details content-->
+                                        </div>
+                                        <!--end::Card body-->
+                                    </div>
+                                    <!--end::Card-->
+                                </div>
+                                <!--end::Sidebar-->
+                                <!--begin::Content-->
+                                <!--end::Content-->
+                            <!--end::Layout-->
+                            <!--begin::Modals-->
+                            <!--begin::Modal - Add schedule-->
+                            <div class="modal fade" id="kt_modal_add_schedule" tabindex="-1" aria-hidden="true">
+                                <!--begin::Modal dialog-->
+                                <div class="modal-dialog modal-dialog-centered mw-650px">
+                                    <!--begin::Modal content-->
+                                    <div class="modal-content">
+                                        <!--begin::Modal header-->
+                                        <div class="modal-header">
+                                            <!--begin::Modal title-->
+                                            <h2 class="fw-bolder">농장 추가 하기</h2>
+                                            <!--end::Modal title-->
+                                            
+                                        </div>
+                                        <!--end::Modal header-->
+                                        <!--begin::Modal body-->
+                                        <div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+                                            <!--begin::Form-->
+                                            <form id="kt_modal_add_schedule_form" class="form fv-plugins-bootstrap5 fv-plugins-framework" action="/dashboard/farms/create/" method="post">
+                                                <input type="hidden"  name="user_id" value="{{user.id}}">
+                                                    
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                    <!--begin::Label-->
+                                                    <label class="required fs-6 fw-bold form-label mb-2">농장 이름</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="text" class="form-control form-control-solid" name="name" value="">
+                                                    <!--end::Input-->
+                                                <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                <!--end::Input group-->
+                                                <!--begin::Actions-->
+                                                <div class="text-center pt-15">
+                                                    <button type="reset" class="btn btn-light me-3" data-kt-users-modal-action="cancel">취소</button>
+                                                    <button type="submit" class="btn btn-primary" data-kt-users-modal-action="submit">
+                                                        <span class="indicator-label">확인</span>
+                                                        <span class="indicator-progress">Please wait...
+                                                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                                                    </button>
+                                                </div>
+                                                <!--end::Actions-->
+                                            <div></div></form>
+                                            <!--end::Form-->
+                                        </div>
+                                        <!--end::Modal body-->
+                                    </div>
+                                    <!--end::Modal content-->
+                                </div>
+                                <!--end::Modal dialog-->
+                            </div>
+                            <!--end::Modal - Add schedule-->
+                            <div class="modal fade" id="kt_modal_update_role" tabindex="-1" aria-hidden="true">
+                                <!--begin::Modal dialog-->
+                                <div class="modal-dialog modal-dialog-centered mw-650px">
+                                    <!--begin::Modal content-->
+                                    <div class="modal-content">
+                                        <!--begin::Modal header-->
+                                        <div class="modal-header">
+                                            <!--begin::Modal title-->
+                                            <h2 class="fw-bold">카메라 추가하기</h2>
+                                            <!--end::Modal title-->
+                                          
+                                        </div>
+                                        <!--end::Modal header-->
+                                        <!--begin::Modal body-->
+                                        <div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+                                            <!--begin::Form-->
+                                            <form id="kt_modal_update_role_form" class="form" action="/dashboard/cameras/create/" method="post">
+                                                <input type="hidden"  name="user_id" value="{{user.id}}">
+                                                
+                                                <!--begin::Notice-->
+                                                <!--begin::Notice-->
+                                                <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+                                                    <!--begin::Icon-->
+                                                    <!--begin::Svg Icon | path: icons/duotune/general/gen044.svg-->
+                                                    <span class="svg-icon svg-icon-2tx svg-icon-primary me-4">
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor"></rect>
+                                                            <rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="currentColor"></rect>
+                                                            <rect x="11" y="17" width="2" height="2" rx="1" transform="rotate(-90 11 17)" fill="currentColor"></rect>
+                                                        </svg>
+                                                    </span>
+                                                    <!--end::Svg Icon-->
+                                                    <!--end::Icon-->
+                                                    <!--begin::Wrapper-->
+                                                    <div class="d-flex flex-stack flex-grow-1">
+                                                        <!--begin::Content-->
+                                                        <div class="fw-semibold">
+                                                            <div class="fs-6 text-gray-700">IP와 포트를 정확하게 입력해주셔야 카메라 동작이 가능합니다</div>
+                                                        </div>
+                                                        <!--end::Content-->
+                                                    </div>
+                                                    <!--end::Wrapper-->
+                                                </div>
+                                                <!--end::Notice-->
+                                                <!--end::Notice-->
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-7">
+                                                    <!--begin::Label-->
+                                                    <label class="fs-6 fw-semibold form-label mb-5">
+                                                        <span class="required">카메라의 농장을 선택해주세요</span>
+                                                    </label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input row-->
+                                                    {% for farm in farms %}
+                                                    <div class="d-flex">
+                                                        <!--begin::Radio-->
+                                                        <div class="form-check form-check-custom form-check-solid">
+                                                            <!--begin::Input-->
+                                                            <input class="form-check-input me-3" name="farm_id" type="radio" value="{{farm.id}}" id="kt_modal_update_role_option_0" checked="checked">
+                                                            <!--end::Input-->
+                                                            <!--begin::Label-->
+                                                            <label class="form-check-label" for="kt_modal_update_role_option_0">
+                                                                <div class="fw-bold text-gray-800">{{farm.name}}</div>
+                                                                <div class="text-gray-600">{{farm.name}}의 카메라가 맞으신가요?</div>
+                                                            </label>
+                                                            <!--end::Label-->
+                                                        </div>
+                                                        <!--end::Radio-->
+                                                    </div>
+                                                    <div class="separator separator-dashed my-5"></div>
+                                                    {% endfor %}
+                                                    
+                                                </div>
+                                                <!--end::Input group-->
+                                                
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                    <!--begin::Label-->
+                                                    <label class="required fs-6 fw-bold form-label mb-2">IP/포트</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="text" class="form-control form-control-solid" name="ip_address" value="">
+                                                    <!--end::Input-->
+                                                <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                    <!--begin::Label-->
+                                                    <label class="required fs-6 fw-bold form-label mb-2">Local IP</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="text" class="form-control form-control-solid" name="local_ip" value="">
+                                                    <!--end::Input-->
+                                                <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                    <!--begin::Label-->
+                                                    <label class="required fs-6 fw-bold form-label mb-2">RTSP 포트</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="text" class="form-control form-control-solid" name="rtsp_port" value="">
+                                                    <!--end::Input-->
+                                                <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                
+                                                <!--end::Input group-->
+                                                <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                    <!--begin::Label-->
+                                                    <label class="required fs-6 fw-bold form-label mb-2">카메라 이름</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="text" class="form-control form-control-solid" name="name" value="">
+                                                    <!--end::Input-->
+                                                <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                <!--end::Input group-->
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                    <!--begin::Label-->
+                                                    <label class="required fs-6 fw-bold form-label mb-2">제조사</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="text" class="form-control form-control-solid" name="manufacturer" value="">
+                                                    <!--end::Input-->
+                                                <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                <!--end::Input group-->
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                    <!--begin::Label-->
+                                                    <label class="required fs-6 fw-bold form-label mb-2">모델명</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="text" class="form-control form-control-solid" name="model_number" value="">
+                                                    <!--end::Input-->
+                                                <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                <!--end::Input group-->
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                    <!--begin::Label-->
+                                                    <label class="required fs-6 fw-bold form-label mb-2">통신사</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="text" class="form-control form-control-solid" name="carrier" value="">
+                                                    <!--end::Input-->
+                                                <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                <!--end::Input group-->
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                    <!--begin::Label-->
+                                                    <label class="required fs-6 fw-bold form-label mb-2">펌웨어</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="text" class="form-control form-control-solid" name="firmware" value="">
+                                                    <!--end::Input-->
+                                                <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                <!--end::Input group-->
+                                                
+                                                <!--begin::Actions-->
+                                                <div class="text-center pt-15">
+                                                    <button type="reset" class="btn btn-light me-3" data-kt-users-modal-action="cancel"><a href="javascript:history.back()">취소</a></button>
+                                                    <button type="submit" class="btn btn-primary" data-kt-users-modal-action="submit">
+                                                        <span class="indicator-label">Submit</span>
+                                                        <span class="indicator-progress">Please wait... 
+                                                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                                                    </button>
+                                                </div>
+                                                <!--end::Actions-->
+                                            </form>
+                                            <!--end::Form-->
+                                        </div>
+                                        <!--end::Modal body-->
+                                    </div>
+                                    <!--end::Modal content-->
+                                </div>
+                                <!--end::Modal dialog-->
+                            </div>
+                            <!--end::Modals-->
+                        </div>
+
+                        {% endblock %}

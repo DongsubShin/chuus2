@@ -1,3 +1,4 @@
+from api import models
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 import requests
@@ -13,6 +14,13 @@ from rest_framework.authtoken.models import Token
 # Create your views here.
 class HomePageView(TemplateView):
     template_name = "index.html"
+    def get(self, request, *args, **kwargs):
+        campaigns = models.Campaign.objects.all()
+        ctx = {
+            'campaigns': campaigns,    
+        }
+        return self.render_to_response(ctx)
+
     
 class ProductDetailPageView(TemplateView):
     template_name = "product_detail.html"

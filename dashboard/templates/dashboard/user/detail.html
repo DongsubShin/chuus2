@@ -1,0 +1,537 @@
+{% extends 'dashboard/base.html'%}
+{% block page_title %}CHUUS 관리자 페이지{% endblock %}
+{% load static %}
+{% block pagecontent %}
+
+<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed aside-enabled aside-fixed">
+    <!--begin::Main-->
+    <!--begin::Root-->
+    <div class="d-flex flex-column flex-root">
+        <!--begin::Page-->
+        <div class="page d-flex flex-row flex-column-fluid">
+            {% include "dashboard/side.html" %}
+            <!--begin::Wrapper-->
+            <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+                <!--begin::Header-->
+                <div id="kt_header" style="" class="header align-items-stretch">
+                    <!--begin::Container-->
+                    <div class="container-fluid d-flex align-items-stretch justify-content-between">
+                        <!--begin::Aside mobile toggle-->
+                        <div class="d-flex align-items-center d-lg-none ms-n2 me-2" title="Show aside menu">
+                            <div class="btn btn-icon btn-active-light-primary w-30px h-30px w-md-40px h-md-40px"
+                                id="kt_aside_mobile_toggle">
+                                <!--begin::Svg Icon | path: icons/duotune/abstract/abs015.svg-->
+                                <span class="svg-icon svg-icon-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M21 7H3C2.4 7 2 6.6 2 6V4C2 3.4 2.4 3 3 3H21C21.6 3 22 3.4 22 4V6C22 6.6 21.6 7 21 7Z"
+                                            fill="currentColor"></path>
+                                        <path opacity="0.3"
+                                            d="M21 14H3C2.4 14 2 13.6 2 13V11C2 10.4 2.4 10 3 10H21C21.6 10 22 10.4 22 11V13C22 13.6 21.6 14 21 14ZM22 20V18C22 17.4 21.6 17 21 17H3C2.4 17 2 17.4 2 18V20C2 20.6 2.4 21 3 21H21C21.6 21 22 20.6 22 20Z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                </span>
+                                <!--end::Svg Icon-->
+                            </div>
+                        </div>
+                        <!--end::Aside mobile toggle-->
+                        <!--begin::Mobile logo-->
+                        <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
+                            <a href="../../demo1/dist/index.html" class="d-lg-none">
+                                <img alt="Logo" src="{% static 'metronic/media/logos/logo-2.svg' %}" class="h-30px">
+                            </a>
+                        </div>
+                        <!--end::Mobile logo-->
+                        <!--begin::Wrapper-->
+                        <div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1">
+                            <!--begin::Navbar-->
+                            <div class="d-flex align-items-center" id="kt_header_nav">
+                                <!--begin::Page title-->
+                                <div data-kt-swapper="true" data-kt-swapper-mode="prepend"
+                                    data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_header_nav'}"
+                                    class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
+                                    <!--begin::Title-->
+                                    <h1 class="d-flex text-dark fw-bolder fs-3 align-items-center my-1">유저 내역</h1>
+                                    <!--end::Title-->
+                                    <!--begin::Separator-->
+                                    <span class="h-20px border-gray-300 border-start mx-4"></span>
+                                    <!--end::Separator-->
+                                    <!--begin::Breadcrumb-->
+                                    <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
+                                        <!--begin::Item-->
+                                        <li class="breadcrumb-item text-muted">
+                                            <a href="../../demo1/dist/index.html"
+                                                class="text-muted text-hover-primary">Home</a>
+                                        </li>
+
+                                        <li class="breadcrumb-item">
+                                            <span class="bullet bg-gray-300 w-5px h-2px"></span>
+                                        </li>
+
+                                        <li class="breadcrumb-item text-dark">유저 내역</li>
+                                        <!--end::Item-->
+
+                                    </ul>
+                                    <!--end::Breadcrumb-->
+                                </div>
+                                <!--end::Page title-->
+                            </div>
+                            <!--end::Navbar-->
+                            <div class="d-flex align-items-stretch flex-shrink-0">
+                                {% include "dashboard/profile.html" %}
+                            </div>
+                            <!--end::Toolbar wrapper-->
+                        </div>
+                        <!--end::Wrapper-->
+                    </div>
+                    <!--end::Container-->
+                </div>
+                <!--end::Header-->
+                <!--begin::Content-->
+                <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+                    <!--begin::Post-->
+                    <div class="post d-flex flex-column-fluid" id="kt_post">
+                        <!--begin::Container-->
+                        <div id="kt_content_container" class="container-xxl">
+                            <!--begin::Layout-->
+                            <div class="d-flex flex-column flex-lg-row">
+                                <!--begin::Sidebar-->
+                                <div class="flex-column flex-lg-row-auto w-lg-250px w-xl-350px mb-10">
+                                    <!--begin::Card-->
+                                    <div class="card mb-5 mb-xl-8">
+                                        <!--begin::Card body-->
+                                        <div class="card-body">
+                                            <p><a href="javascript:history.back()"><< 뒤로 가기</a></p>
+                                            <!--begin::Summary-->
+                                            <!--begin::User Info-->
+                                            <div class="d-flex flex-center flex-column py-5">
+                                                <!--begin::Avatar-->
+                                                <div class="symbol symbol-100px symbol-circle mb-7">
+                                                    <img src="{% static 'metronic/media/avatars/blank.png' %}" alt="image">
+                                                </div>
+                                                <!--end::Avatar-->
+                                                <!--begin::Name-->
+                                                <a href="#" class="fs-3 text-gray-800 text-hover-primary fw-bolder mb-3">{{user.name}}</a>
+                                                <!--end::Name-->
+                                                <!--begin::Position-->
+                                                <div class="mb-9">
+                                                    <!--begin::Badge-->
+                                                    <div class="badge badge-lg badge-light-primary d-inline">일반 회원</div>
+                                                    <!--begin::Badge-->
+                                                </div>
+                                                <!--end::Position-->
+                                                
+                                            </div>
+                                            <!--end::User Info-->
+                                            <!--end::Summary-->
+                                            <!--begin::Details toggle-->
+                                            <div class="d-flex flex-stack fs-4 py-3">
+                                                <div class="fw-bolder rotate collapsible" data-bs-toggle="collapse" href="#kt_user_view_details" role="button" aria-expanded="false" aria-controls="kt_user_view_details">Details
+                                                <span class="ms-2 rotate-180">
+                                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+                                                    <span class="svg-icon svg-icon-3">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <!--end::Svg Icon-->
+                                                </span></div>
+                                            </div>
+                                            <!--end::Details toggle-->
+                                            <div class="separator"></div>
+                                            <!--begin::Details content-->
+                                            <div id="kt_user_view_details" class="collapse">
+                                                <div class="pb-5 fs-6">
+                                                    <!--begin::Details item-->
+                                                    <div class="fw-bolder mt-5">전화번호</div>
+                                                    <div class="text-gray-600">
+                                                        <a href="#" class="text-gray-600 text-hover-primary">{{user.phone}}</a>
+                                                    </div>
+                                                    <!--begin::Details item-->
+                                                    <div class="fw-bolder mt-5">농장주소</div>
+                                                    <div class="text-gray-600">{{user.address}}</div>
+                                                    <!--begin::Details item-->
+                                                    
+                                                    <!--begin::Details item-->
+                                                    <div class="fw-bolder mt-5">사육두수</div>
+                                                    <div class="text-gray-600">{{user.cow_count}}</div>
+
+                                                    <!--begin::Details item-->
+                                                    <div class="fw-bolder mt-5">농장종류</div>
+                                                    <div class="text-gray-600">{{user.category}}</div>
+                                                </div>
+                                            </div>
+                                            <!--end::Details content-->
+                                        </div>
+                                        <!--end::Card body-->
+                                    </div>
+                                    <!--end::Card-->
+                                </div>
+                                <!--end::Sidebar-->
+                                <!--begin::Content-->
+                                <div class="flex-lg-row-fluid ms-lg-15">
+                                    <!--begin:::Tabs-->
+                                    <ul class="nav nav-custom nav-tabs nav-line-tabs nav-line-tabs-2x border-0 fs-4 fw-bold mb-8">
+                                    
+                                        <!--begin:::Tab item-->
+                                        <li class="nav-item">
+                                            <a class="nav-link text-active-primary pb-4" data-kt-countup-tabs="true" data-bs-toggle="tab" href="#kt_user_view_overview_security">켐페인 신청 내역</a>
+                                        </li>
+                                        <!--end:::Tab item-->
+                                    </ul>
+                                    <!--end:::Tabs-->
+                                    <!--begin:::Tab content-->
+                                    <div class="tab-content" id="myTabContent">
+                                        <!--begin:::Tab pane-->
+                                        {% comment %} <div class="tab-pane fade " id="kt_user_view_overview_events_and_logs_tab" role="tabpanel">
+                                            <!--begin::Card-->
+                                            <div class="card pt-4 mb-6 mb-xl-9">
+                                                <!--begin::Card header-->
+                                                <div class="card-header border-0">
+                                                    <!--begin::Card title-->
+                                                    <div class="card-title">
+                                                        <h2>농장 내역</h2>
+                                                    </div>
+                                                    <!--end::Card title-->
+                                                    <!--begin::Card toolbar-->
+                                                    <div class="card-toolbar">
+                                                        <button type="button" class="btn btn-light-primary btn-sm" data-bs-toggle="modal" data-bs-target="#kt_modal_add_schedule">
+                                                        <!--SVG file not found: media/icons/duotune/art/art008.svg-->
+                                                        농장 추가하기</button>
+                                                    </div>
+                                                    <!--end::Card toolbar-->
+                                                </div>
+                                                <!--end::Card header-->
+                                                <!--begin::Card body-->
+                                                <div class="card-body pt-0 pb-5">
+                                                    <!--begin::Table wrapper-->
+                                                    <div class="table-responsive">
+                                                        <!--begin::Table-->
+                                                        <table class="table align-middle table-row-dashed gy-5" id="kt_table_users_login_session">
+                                                            <!--begin::Table head-->
+                                                            <thead class="border-bottom border-gray-200 fs-7 fw-bolder">
+                                                                <!--begin::Table row-->
+                                                                <tr class="text-start text-muted text-uppercase gs-0">
+                                                                    <th class="text-center">아이디</th>
+                                                                    <th class="text-center">농장 이름</th>
+                                                                    <th class="text-center">카메라 수</th>
+                                                                    <th class="text-center">수정 하기</th>
+                                                                    <th class="text-center">상세 보기</th>
+                                                                </tr>
+                                                                <!--end::Table row-->
+                                                            </thead>
+                                                            <!--end::Table head-->
+                                                            <!--begin::Table body-->
+                                                            <tbody class="fs-6 fw-bold text-gray-600">
+                                                                {% for farm in farms %}
+                                                                <tr>
+                                                                    <!--begin::Status=-->
+                                                                    <td class="text-center">{{farm.id}}</td>
+                                                                    <!--end::Status=-->
+                                                                    <!--begin::Amount=-->
+                                                                    <td class="text-center">{{farm.name}}</td>
+                                                                    <!--end::Amount=-->
+                                                                    <!--begin::Invoice=-->
+                                                                    <td class="text-center">{{farm.cameras.count}}</td>
+                                                                    <!--end::Invoice=-->
+                                                                    <td class="text-center">
+                                                                        <a href ="/admin/api/farm/{{farm.id}}/change/"><div class="badge badge-lg badge-light-primary d-inline">수정 하기</div></a>
+                                                                    </td>
+                                                                    <!--begin::Invoice=-->
+                                                                    <td class="text-center">
+                                                                        <a href = "/dashboard/farms/{{farm.id}}/"><div class="badge badge-lg badge-light-primary d-inline">상세 보기</div></a>
+                                                                    </td>
+                                                                    <!--end::Invoice=-->
+                                                                </tr>
+                                                                {% endfor %}
+                                                                
+                                                            </tbody>
+                                                            <!--end::Table body-->
+                                                        </table>
+                                                        <!--end::Table-->
+                                                    </div>
+                                                    <!--end::Table wrapper-->
+                                                </div>
+                                                <!--end::Card body-->
+                                            </div>
+                                            <!--end::Card-->
+                                        </div> {% endcomment %}
+                                        <!--end:::Tab pane-->
+                                        <!--begin:::Tab pane-->
+                                        <div class="tab-pane fade active show" id="kt_user_view_overview_security" role="tabpanel">
+                                            <!--begin::Card-->
+                                            <div class="card pt-4 mb-6 mb-xl-9">
+                                                <!--begin::Card header-->
+                                                <div class="card-header border-0">
+                                                    <!--begin::Card title-->
+                                                    <div class="card-title">
+                                                        <h2>켐페인 내역</h2>
+                                                    </div>
+                                                    <!--end::Card title-->
+                                                    <!--begin::Card toolbar-->
+                                                    <div class="card-toolbar">
+                                                        {% comment %} <button type="button" class="btn btn-light-primary btn-sm" data-bs-toggle="modal" data-bs-target="#kt_modal_update_role">
+                                                        <!--SVG file not found: media/icons/duotune/art/art008.svg-->
+                                                        카메라 추가하기</button> {% endcomment %}
+                                                    </div>
+                                                    <!--end::Card toolbar-->
+                                                </div>
+                                                <!--end::Card header-->
+                                                <!--begin::Card body-->
+                                                <div class="card-body pt-0 pb-5">
+                                                    <!--begin::Table wrapper-->
+                                                    <div class="table-responsive">
+                                                        <!--begin::Table-->
+                                                        <table class="table align-middle table-row-dashed gy-5" id="kt_table_users_login_session">
+                                                            <!--begin::Table head-->
+                                                            <thead class="border-bottom border-gray-200 fs-7 fw-bolder">
+                                                                <!--begin::Table row-->
+                                                                <tr class="text-start text-muted text-uppercase gs-0">
+                                                                    <th class="text-center">아이디</th>
+                                                                    <th class="text-center">이름</th>
+                                                                    <th class="text-center">수정</th>
+                                                                    <th class="text-center">삭제</th>
+                                                                </tr>
+                                                                <!--end::Table row-->
+                                                            </thead>
+                                                            <!--end::Table head-->
+                                                            <!--begin::Table body-->
+                                                            <tbody class="fs-6 fw-bold text-gray-600">
+                                                                {% for camera in cameras %}
+                                                                <tr>
+                                                                    <!--begin::Status=-->
+                                                                    <td class="text-center">{{camera.id}}</td>
+                                                                    <!--end::Status=-->
+                                                                    <td class="text-center">{{camera.name}}</td><!--begin::Amount=-->
+                                                                    <!--begin::Invoice=-->
+                                                                    <td class="text-center">
+                                                                        <a href ="/dashboard/cameras/edit/{{camera.id}}/"><div class="badge badge-lg badge-light-primary d-inline">수정 하기</div></a>
+                                                                    </td>
+                                                                    <td class="text-center">
+                                                                        <form action="/dashboard/cameras/delete/{{camera.id}}/" method="post">
+                                                                            {% csrf_token %}
+                                                                            <button class="btn btn-light-primary btn-sm" type = "submit">삭제</button>
+                                                                        </form>
+                                                                    </td>
+                                                                    <!--end::Invoice=-->
+                                                                </tr>
+                                                                {% endfor %}
+                                                                
+                                                            </tbody>
+                                                            <!--end::Table body-->
+                                                        </table>
+                                                        <!--end::Table-->
+                                                    </div>
+                                                    <!--end::Table wrapper-->
+                                                </div>
+                                                <!--end::Card body-->
+                                            </div>
+                                            <!--end::Card-->
+                                        </div>
+                                        <!--end:::Tab pane-->
+                                        
+                                    </div>
+                                    <!--end:::Tab content-->
+                                </div>
+                                <!--end::Content-->
+                            </div>
+                            <!--end::Layout-->
+                            <!--begin::Modals-->
+                            <!--begin::Modal - Add schedule-->
+                            <div class="modal fade" id="kt_modal_add_schedule" tabindex="-1" aria-hidden="true">
+                                <!--begin::Modal dialog-->
+                                <div class="modal-dialog modal-dialog-centered mw-650px">
+                                    <!--begin::Modal content-->
+                                    <div class="modal-content">
+                                        <!--begin::Modal header-->
+                                        <div class="modal-header">
+                                            <!--begin::Modal title-->
+                                            <h2 class="fw-bolder">농장 추가 하기</h2>
+                                            <!--end::Modal title-->
+                                            
+                                        </div>
+                                        <!--end::Modal header-->
+                                        <!--begin::Modal body-->
+                                        <div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+                                            <!--begin::Form-->
+                                            <form id="kt_modal_add_schedule_form" class="form fv-plugins-bootstrap5 fv-plugins-framework" action="/dashboard/farms/create/" method="post">
+                                                <input type="hidden"  name="user_id" value="{{user.id}}">
+                                                    
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                    <!--begin::Label-->
+                                                    <label class="required fs-6 fw-bold form-label mb-2">농장 이름</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="text" class="form-control form-control-solid" name="name" value="">
+                                                    <!--end::Input-->
+                                                <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                <!--end::Input group-->
+                                                <!--begin::Actions-->
+                                                <div class="text-center pt-15">
+                                                    <button type="reset" class="btn btn-light me-3" data-kt-users-modal-action="cancel">취소</button>
+                                                    <button type="submit" class="btn btn-primary" data-kt-users-modal-action="submit">
+                                                        <span class="indicator-label">확인</span>
+                                                        <span class="indicator-progress">Please wait...
+                                                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                                                    </button>
+                                                </div>
+                                                <!--end::Actions-->
+                                            <div></div></form>
+                                            <!--end::Form-->
+                                        </div>
+                                        <!--end::Modal body-->
+                                    </div>
+                                    <!--end::Modal content-->
+                                </div>
+                                <!--end::Modal dialog-->
+                            </div>
+                            <!--end::Modal - Add schedule-->
+                            <div class="modal fade" id="kt_modal_update_role" tabindex="-1" aria-hidden="true">
+                                <!--begin::Modal dialog-->
+                                <div class="modal-dialog modal-dialog-centered mw-650px">
+                                    <!--begin::Modal content-->
+                                    <div class="modal-content">
+                                        <!--begin::Modal header-->
+                                        <div class="modal-header">
+                                            <!--begin::Modal title-->
+                                            <h2 class="fw-bold">카메라 추가하기</h2>
+                                            <!--end::Modal title-->
+                                          
+                                        </div>
+                                        <!--end::Modal header-->
+                                        <!--begin::Modal body-->
+                                        <div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+                                            <!--begin::Form-->
+                                            <form id="kt_modal_update_role_form" class="form" action="/dashboard/cameras/create/" method="post">
+                                                <input type="hidden"  name="user_id" value="{{user.id}}">
+                                                
+                                                <!--begin::Notice-->
+                                                <!--begin::Notice-->
+                                                <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+                                                    <!--begin::Icon-->
+                                                    <!--begin::Svg Icon | path: icons/duotune/general/gen044.svg-->
+                                                    <span class="svg-icon svg-icon-2tx svg-icon-primary me-4">
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor"></rect>
+                                                            <rect x="11" y="14" width="7" height="2" rx="1" transform="rotate(-90 11 14)" fill="currentColor"></rect>
+                                                            <rect x="11" y="17" width="2" height="2" rx="1" transform="rotate(-90 11 17)" fill="currentColor"></rect>
+                                                        </svg>
+                                                    </span>
+                                                    <!--end::Svg Icon-->
+                                                    <!--end::Icon-->
+                                                    <!--begin::Wrapper-->
+                                                    <div class="d-flex flex-stack flex-grow-1">
+                                                        <!--begin::Content-->
+                                                        <div class="fw-semibold">
+                                                            <div class="fs-6 text-gray-700">IP와 포트를 정확하게 입력해주셔야 카메라 동작이 가능합니다</div>
+                                                        </div>
+                                                        <!--end::Content-->
+                                                    </div>
+                                                    <!--end::Wrapper-->
+                                                </div>
+                                                <!--end::Notice-->
+                                                <!--end::Notice-->
+                                                
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                    <!--begin::Label-->
+                                                    <label class="required fs-6 fw-bold form-label mb-2">IP/포트</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="text" class="form-control form-control-solid" name="ip_address" value="" required>
+                                                    <!--end::Input-->
+                                                <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                <!--end::Input group-->
+                                                <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                    <!--begin::Label-->
+                                                    <label class="required fs-6 fw-bold form-label mb-2">Local IP</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="text" class="form-control form-control-solid" name="local_ip" value="" required>
+                                                    <!--end::Input-->
+                                                <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                    <!--begin::Label-->
+                                                    <label class="required fs-6 fw-bold form-label mb-2">RTSP 포트</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="text" class="form-control form-control-solid" name="rtsp_port" value="" required>
+                                                    <!--end::Input-->
+                                                <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                
+                                                <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                    <!--begin::Label-->
+                                                    <label class="required fs-6 fw-bold form-label mb-2">카메라 이름</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="text" class="form-control form-control-solid" name="name" value="" required>
+                                                    <!--end::Input-->
+                                                <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                <!--end::Input group-->
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                    <!--begin::Label-->
+                                                    <label class="required fs-6 fw-bold form-label mb-2">제조사</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="text" class="form-control form-control-solid" name="manufacturer" value="" required>
+                                                    <!--end::Input-->
+                                                <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                <!--end::Input group-->
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                    <!--begin::Label-->
+                                                    <label class="required fs-6 fw-bold form-label mb-2">모델명</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="text" class="form-control form-control-solid" name="model_number" value="" required>
+                                                    <!--end::Input-->
+                                                <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                <!--end::Input group-->
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                    <!--begin::Label-->
+                                                    <label class="required fs-6 fw-bold form-label mb-2">통신사</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="text" class="form-control form-control-solid" name="carrier" value="" required>
+                                                    <!--end::Input-->
+                                                <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                <!--end::Input group-->
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-7 fv-plugins-icon-container">
+                                                    <!--begin::Label-->
+                                                    <label class="required fs-6 fw-bold form-label mb-2">펌웨어</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="text" class="form-control form-control-solid" name="firmware" value="" required>
+                                                    <!--end::Input-->
+                                                <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                                                <!--end::Input group-->
+                                                
+                                                <!--begin::Actions-->
+                                                <div class="text-center pt-15">
+                                                    <button type="submit" class="btn btn-primary" data-kt-users-modal-action="submit">
+                                                        <span class="indicator-label">Submit</span>
+                                                        <span class="indicator-progress">Please wait... 
+                                                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                                                    </button>
+                                                </div>
+                                                <!--end::Actions-->
+                                            </form>
+                                            <!--end::Form-->
+                                        </div>
+                                        <!--end::Modal body-->
+                                    </div>
+                                    <!--end::Modal content-->
+                                </div>
+                                <!--end::Modal dialog-->
+                            </div>
+                            <!--end::Modals-->
+                        </div>
+
+                        {% endblock %}

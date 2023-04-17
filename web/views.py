@@ -12,8 +12,8 @@ from rest_framework.authtoken.models import Token
 
 # Create your views here.
 class HomePageView(TemplateView):
-    template_name = "index.html"
+    template_name = "web_index.html"
+
 
 class PrivacyPageView(TemplateView):
     template_name = "privacy.html"
-
