@@ -47,10 +47,18 @@ class User(AbstractBaseUser, PermissionsMixin):
 class EarlyBird(models.Model):
     email = models.EmailField(max_length=255, null=True)
     instagram = models.CharField(max_length=255, null=True, default=None)
+
+class CampaignCategory(models.Model):
+    name = models.CharField(max_length=200)
+
+class CampaignSubCategory(models.Model):
+    name = models.CharField(max_length=200)
+    category = models.ForeignKey(CampaignCategory, related_name='sub_categories', on_delete=models.CASCADE, default=None, null=True)
     
 class Campaign(models.Model): 
     name = models.CharField(max_length=255, null=True)
-    category = models.CharField(max_length=255, null=True)
+    category = models.ForeignKey(CampaignCategory, related_name='campaigns', on_delete=models.CASCADE, default=None, null=True)
+    sub_category = models.ForeignKey(CampaignSubCategory, related_name='campaigns', on_delete=models.CASCADE, default=None, null=True)
     count =  models.IntegerField(default = 0)
     price =  models.IntegerField(default = 0)
     before_price =  models.IntegerField(default = 0)
@@ -60,6 +68,7 @@ class Campaign(models.Model):
     hashtag = models.CharField(max_length=255, null=True)
     accounttag = models.CharField(max_length=255, null=True)
     info = QuillField()
+    
 
 class CampaignOption(models.Model):
     campaign = models.ForeignKey(Campaign, on_delete=models.CASCADE, null=True)
