@@ -323,26 +323,26 @@
     <!-- Container End -->
  </section>
 
- <section id="portfolio" class="cube-portfolio1 text-center no-transition">
-  <div class="container">
+{% comment %} <section id="portfolio" class="cube-portfolio1 text-center no-transition">
+<div class="container">
 
-      <!--Heading-->
-      <div class="heading-area pb-lg-5">
-          <h6 class="sub-title main-color">DO NOT WORRY</h6>
-          <h2 class="title"><b>
-            Don't you have any products <br> to sell to your Fans?</b>
-            <br></h2>
-            <p>
-            We have products list that is very popular among Korean women in their 20s.</p>
-            
-            <a href="/influencer/campaigns" class="btn btn-large btn-rounded btn-purple mr-2 mt-2">Check Now</a>
-          <!--Portfolio Filters-->
-          </p>
-      </div>
+    <!--Heading-->
+    <div class="heading-area pb-lg-5">
+        <h6 class="sub-title main-color">DO NOT WORRY</h6>
+        <h2 class="title"><b>
+        Don't you have any products <br> to sell to your Fans?</b>
+        <br></h2>
+        <p>
+        We have products list that is very popular among Korean women in their 20s.</p>
+        
+        <a href="/influencer/campaigns" class="btn btn-large btn-rounded btn-purple mr-2 mt-2">Check Now</a>
+        <!--Portfolio Filters-->
+        </p>
+    </div>
 
 
-  </div>
-</section>
+</div>
+</section> {% endcomment %}
   <!--Parallax Start-->
   {% comment %} <section class="parallax bg-img1">
       <div class="bg-overlay bg-main opacity-7"></div>
@@ -456,7 +456,7 @@
                   
                   <div class="col-md-12 col-sm-12">
                       <div class="form-group">
-                          <input class="form-control" type="text" placeholder="FaceBook Link" required="" id="instagram" name="instagram">
+                          <input class="form-control" type="text" placeholder="FaceBook Link" required=true id="instagram" name="instagram">
                       </div>
                   </div>
                   <div class="col-sm-12">
@@ -499,37 +499,37 @@
     $(document).ready(function () {
   
       $("#ajax").click(function (e) {
-        e.preventDefault();
-          
+        if ($("#instagram").val().length == 0){
+            alert("Please fill in all fields");
+            return;
+        } else {
+            e.preventDefault();
             var formData = new FormData();
-
+    
             formData.append("instagram", $("#instagram").val());
-         
+            
             $.ajax({
-              type: "POST",
-              url: "/api/earlyBird/",
-              data: formData,
-              cache: false,
-              contentType: false,
-              processData: false,
-              success: function (result) {
+                type: "POST",
+                url: "/api/earlyBird/",
+                data: formData,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (result) {
+                    alert("Apply Confirmed :)");
+                    console.log(result);
             
-            alert("Apply Confirmed :)");
-            console.log(result);
-            
-                      
-      
-              },
-              error: function (result) {
-                console.log(result);
-                alert("Apply failed :(");
-              },
-          })
-    
-        })
-    
-    
+                },
+                error: function (result) {
+                    console.log(result);
+                    alert("Apply failed :(");
+                },
+            });
+        
+        }
     });
+});
+
   </script>
 
 
