@@ -29,11 +29,13 @@ class UserManager(BaseUserManager):
 class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(max_length=255, unique=True, null= True, blank=True)
     name = models.CharField(max_length=255, null=True)
+    facebook = models.CharField(max_length=255, null=True)
+    instagram = models.CharField(max_length=255, null=True)
+    tiktok = models.CharField(max_length=255, null=True)
     profile_image = models.ImageField(editable=True, null=True, blank=True)
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
 
-    instagram = models.CharField(max_length=255, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True)
     
     objects = UserManager()
