@@ -901,12 +901,12 @@
                             </div> {% endcomment %}
                             <div class="deals-content">
                                 <h2><a href = "/influencer/campaigns/{{campaign.id}}/">{{campaign.name}}</a></h2>
-                                {% comment %} <div class="product-rate-cover">
+                                 <div class="product-rate-cover">
                                     <div class="product-rate d-inline-block">
                                         <div class="product-rating" style="width: 90%"></div>
                                     </div>
                                     <span class="font-small ml-5 text-muted"> (4.0)</span>
-                                </div> {% endcomment %}
+                                </div> 
                                 <div>
                                     <span class="font-small text-muted">By <a href="vendor-details-1.html">CHUUS</a></span>
                                 </div>
@@ -922,11 +922,7 @@
                             </div>
                         </div>
                     </div>
-                
-                {% if forloop.counter|divisibleby:4 %}
                 </div>
-                <div class="row">
-                    {% endif %}
                 {% endfor %}
             </div>
         </div>
