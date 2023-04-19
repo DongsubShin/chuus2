@@ -5698,11 +5698,11 @@ header.mega-elements .fixed-menu.navbar-top-default .header-social a:hover {
 .ui-block-21.about .about-list li .a-icon {
   font-size: 25px;
   margin-right: 15px;
-  color: #F6869C;
+  color: #EACDCB;
 }
 
 .ui-block-21.about .main-color {
-  color: #F6869C;
+  color: #EACDCB;
 }
 
 .ui-block-21.about h1,
@@ -11736,7 +11736,7 @@ section.ui-block-25 {
 }
 
 .ui-block-12.stats .bg-main {
-  background: #F6869C;
+  background: #EACDCB;
 }
 
 .ui-block-12.stats .opacity-7 {
@@ -23346,7 +23346,7 @@ a:hover {
 
 .ui-block-07.team-sec .services-skill .progress-bar {
   border-radius: 50px;
-  background-color: #F6869C;
+  background-color: #EACDCB;
 }
 
 .ui-block-07.team-sec .progress-item b {
@@ -23369,7 +23369,7 @@ a:hover {
 .ui-block-07.team-sec .team-detail .social-icon {
   margin: 0;
   list-style: none;
-  background: #F6869C;
+  background: #EACDCB;
   padding: 22px 0;
 }
 
@@ -23405,7 +23405,7 @@ a:hover {
 }
 
 .ui-block-07.team-sec .main-color {
-  color: #F6869C;
+  color: #EACDCB;
 }
 
 .ui-block-07.team-sec h1,
@@ -36982,16 +36982,16 @@ section.main-page {
 }
 
 .ui-block-15.button .btn.btn-purple {
-  background: #F6869C;
-  border-color: #F6869C;
+  background: #EACDCB;
+  border-color: #EACDCB;
   color: #ffffff;
 }
 
 .ui-block-15.button .btn.btn-purple:hover,
 .btn.btn-purple:focus {
   background: transparent !important;
-  border-color: #F6869C;
-  color: #F6869C !important;
+  border-color: #EACDCB;
+  color: #EACDCB !important;
 }
 
 /* ===================================
