@@ -95,14 +95,17 @@
                                         <a href="#" class="qty-up"><i class="fi-rs-angle-small-up"></i></a>
                                     </div> {% endcomment %}
                                     <div class="product-extra-link2" style = "width:100%">
-                                        <div class= "card-login" style = "margin:0px; padding:0px; border: none">
-                                            <a href='{% provider_login_url "facebook" method="oauth2" %}' class="social-login facebook-login" style = "margin:0px 0px 10px 0px">
-                                                <img src="{% static 'assets/imgs/theme/icons/logo-facebook.svg' %}" alt="" />
-                                                <span>Login with Facebook</span>
-                                            </a>
-                                            
-                                        </div>
-                                        <button type="submit" class="button button-add-to-cart" style = "width:100%"><i class="fi-rs-heart"></i>APPLY</button>
+                                        
+                                        {% if user.is_authenticated %}
+                                            <div class= "card-login" style = "margin:0px; padding:0px; border: none">
+                                                <a href='{% provider_login_url "facebook" method="oauth2" %}' class="social-login facebook-login" style = "margin:0px 0px 10px 0px">
+                                                    <img src="{% static 'assets/imgs/theme/icons/logo-facebook.svg' %}" alt="" />
+                                                    <span>Login with Facebook</span>
+                                                </a>
+                                            </div>
+                                        {% else%}
+                                            <button type="submit" class="button button-add-to-cart" style = "width:100%"><i class="fi-rs-heart"></i>APPLY</button>
+                                        {% endif %}
                                     </div>
                                 </div>
                                 <div class="font-xs">
