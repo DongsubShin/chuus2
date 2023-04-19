@@ -50,6 +50,7 @@ class EarlyBird(models.Model):
     
 class Campaign(models.Model): 
     name = models.CharField(max_length=255, null=True)
+    category = models.CharField(max_length=255, null=True)
     count =  models.IntegerField(default = 0)
     price =  models.IntegerField(default = 0)
     before_price =  models.IntegerField(default = 0)
@@ -59,6 +60,10 @@ class Campaign(models.Model):
     hashtag = models.CharField(max_length=255, null=True)
     accounttag = models.CharField(max_length=255, null=True)
     info = QuillField()
+
+class CampaignOption(models.Model):
+    campaign = models.ForeignKey(Campaign, on_delete=models.CASCADE, null=True)
+    value = models.CharField(max_length=255, null=True)
     
 class Influencer(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name="influencers", on_delete=models.CASCADE, null=True)

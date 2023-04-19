@@ -16,14 +16,38 @@ class HomePageView(TemplateView):
     template_name = "index.html"
     def get(self, request, *args, **kwargs):
         campaigns = models.Campaign.objects.all()
+
         ctx = {
             'campaigns': campaigns,    
         }
         return self.render_to_response(ctx)
 
     
-class ProductDetailPageView(TemplateView):
-    template_name = "product_detail.html"
+class CampaignDetailPageView(TemplateView):
+    template_name = "campaign/campaign_detail.html"
+    def get(self, request, *args, **kwargs):
+        print(request)
+        campaigns = models.Campaign.objects.all().order_by('?')[:4]
+        
+        campaign = models.Campaign.objects.get(pk = kwargs['pk'])
+        images = models.CampaignImage.objects.filter(campaign = campaign)
+        ctx = {
+            'campaigns': campaigns,
+            'campaign': campaign,
+            'images': images,    
+        }
+        return self.render_to_response(ctx)
+    
+    
+class CampaignListPageView(TemplateView):
+    template_name = "campaign/campaign_list.html"
+    def get(self, request, *args, **kwargs):
+        print(request)
+        campaigns = models.Campaign.objects.all()
+        ctx = {
+            'campaigns': campaigns,
+        }
+        return self.render_to_response(ctx)
 
 class AboutPageView(TemplateView):
     template_name = "about.html"

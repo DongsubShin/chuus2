@@ -10,7 +10,8 @@ urlpatterns = [
     path('home', views.HomePageView.as_view(), name='home'),
     path('contact', views.ContactPageView.as_view(), name='contact'),
     path('about', views.AboutPageView.as_view(), name='about'),
-    path('products/<int:pk>/', views.ProductDetailPageView.as_view(), name='detail'),
+    path('campaigns/', views.CampaignListPageView.as_view(), name='list'),
+    path('campaigns/<int:pk>/', views.CampaignDetailPageView.as_view(), name='detail'),
     path('accounts/', include('allauth.urls')),
 
  

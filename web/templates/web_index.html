@@ -1,7 +1,9 @@
 {% extends 'web_base.html'%} 
-{% block page_title %}chuus, E-commerce for Influencers{% endblock %}
+{% block page_title %}CHUUS, Easiest Commerce for Influencers{% endblock %}
 {% load static %} {% block pagecontent %}
 <body data-spy="scroll" data-target=".navbar" data-offset="90">
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v16.0&appId=188575010647969&autoLogAppEvents=1" nonce="yhQgdr8g"></script>
 
   <!-- Preloader -->
   <div class="preloader">
@@ -91,12 +93,12 @@
               <div class="col-lg-6">
                   <!-- Box Area -->
                   <div class="heading-box">
-                    <p style = "font-size:20px">Do you have followers?</p>
+                    {% comment %} <p style = "font-size:20px">Stop Selling Products using Facebook Message</p> {% endcomment %}
                     <h2>
                         
-                        <b>MONTHLY<br> INCOME <span class="main-color">₱ 10,000</span> </b></h2>
-                        <p><span class="main-color">chuus</span> 
-                            is an e-commerce platform for Filipino influencers<br> who love Korean fashion styles."
+                        <b>Easiest<br> SNS Market<span class="main-color">CHUUS</span> </b></h2>
+                        <p><span class="main-color">CHUUS</span> 
+                            is an easiest e-commerce<br> for Filipino influencers"
                         </p>
                         <a href="javascript:void(0);" class="btn btn-large btn-rounded btn-purple mr-2 mt-2">Apply</a>
                       <a href="javascript:void(0);" class="btn btn-large btn-rounded btn-transparent-black mt-2">Learn More</a> 
@@ -133,12 +135,13 @@
             <div class="col-lg-6 order-lg-2" >
               
                 <div class="heading-area pl-lg-4 p-0">
-                    <h6 class="sub-title main-color">If you have more than 1K Followers</h6>
-                    <h2 class="title" ><b>Apply now!</b></h2>
+                    <h6 class="sub-title main-color">Are you still selling products using DM ?</h6>
+                    <h2 class="title" ><b>STOP!</b></h2>
                     <!--List-->
                     <p>
-                     You can make ₱ 10,000 monthly in average. <br>
-                      chuus is a platform that connects influencers and your fan. <br>You can easily sell clothing with chuus
+                      Answer to DM, Send photos, 
+                      <br>Answer again, Send G-cash QR code
+                      <br>Stop waisting your time.
                     </p>
                     
                    
@@ -159,40 +162,6 @@
    </section>
   <!--About End-->
   <!--Home End-->
-   <!--About Star-->
-   <section id="about2">
-    <div class="container">
-        <div class="row dot-box" style = "align-items:center; justify-content=center">
-
-            <!-- Heading Area-->
-            <div class="col-lg-6 " >
-              
-                <div class="heading-area pl-lg-4 p-0">
-                    <h6 class="sub-title main-color"><b>No need to buy products, Shipping, CS</b></h6>
-                    <h2 class="title" ><b>Just upload your images to <span class = "main-color">chuus</span></b></h2>
-                    <!--List-->
-                    <p>
-                      Just focus on taking pretty picture of yourself <br>
-                      chuus takes care of all annoying stuffs.
-                    </p>
-                    
-                   
-                </div>
-            </div>
-
-            <!-- Features Box-->
-            <div class="col-lg-6">
-                <!--About Image-->
-                <div class="about-image">
-                    <img src="{% static 'studio/img/section2.png' %}" alt="about-img" style = "width:100%">
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-   </section>
-  <!--About End-->
 
   <section id="about3">
     <div class="container">
@@ -202,12 +171,12 @@
             <div class="col-lg-6 order-lg-2" >
               
                 <div class="heading-area pl-lg-4 p-0">
-                    <h6 class="sub-title main-color"><b>In less than 1 day</b></h6>
-                    <h2 class="title" ><b>Your <span class = "main-color">Own Shop</span><br> is Ready</b></h2>
+                    <h6 class="sub-title main-color"><b>With few clicks</b></h6>
+                    <h2 class="title" ><b>You can start <span class = "main-color">Your Own Shop</span><br></b></h2>
                     <!--List-->
                     <p>
-                      Let's start your own business with chuus <br>
-                      Tell your fans about your store and start selling
+                      You don't need to worry about  <br>
+                        <span class = "main-color">Making Website, Payment, Customer Service</span>
                     </p>
                     
                    
@@ -226,7 +195,43 @@
 
     </div>
    </section>
+     <!--About Star-->
+    <section id="about2">
+    <div class="container">
+        <div class="row dot-box" style = "align-items:center; justify-content=center">
+
+            <!-- Heading Area-->
+            <div class="col-lg-6 " >
+              
+                <div class="heading-area pl-lg-4 p-0">
+                    <h6 class="sub-title main-color"><b>Start your own shop in 5 minutes</b></h6>
+                    <h2 class="title"><b> UPLOAD <span class = "main-color">CHUUS LINK</span><br> TO YOUR SNS</span></b></h2>
+                    <!--List-->
+                    <p>
+                      Your followers and Fans <br>
+                      can easily shop in your own shop
+                    </p>
+                    
+                   
+                </div>
+            </div>
+
+            <!-- Features Box-->
+            <div class="col-lg-6">
+                <!--About Image-->
+                <div class="about-image">
+                    <img src="{% static 'studio/img/link.jpg' %}" alt="about-img" style = "width:100%">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+   </section>
   <!--About End-->
+
+  
+   <!--About End-->
   {% comment %} <!--About Star-->
   <section id="about2">
       <div class="container">
@@ -262,7 +267,7 @@
        <!-- row-1 -->
        <div class="row row-1 no-gutters">
           <div class="col-lg-12 col-md-12 col-sm-12 heading-col text-center wow fadeIn" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: fadeIn;">
-             <h5 class="subheading ">E-commerce for influencers</h5>
+             <h5 class="subheading ">Easiest Commerce for influencers</h5>
              <h2 class="heading"><B>Welcome to chuus</b></h2>
           </div>
        </div>
@@ -281,16 +286,16 @@
           <div class="col-lg-3 col-md-12 col-sm-12 wow fadeInLeft" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: fadeInLeft;">
              <div class="service text-center">
                 <h2 class="heading">01.</h2>
-                <h5 class="subheading">Just take pictures.</h5>
-                <p class="text">We take care of everything(Buying, Shipping, CS, Payment) you need to do to start your online business.</p>
+                <h5 class="subheading">Create Your SHOP</h5>
+                <p class="text">It takes less than 5 minutes</p>
              </div>
           </div>
           <div class="col-lg-6 col-md-12 col-sm-12"></div>
           <div class="col-lg-3 col-md-12 col-sm-12 wow fadeInRight" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: fadeInRight;">
              <div class="service text-center">
                 <h2 class="heading">02.</h2>
-                <h5 class="subheading">Upload images to chuus</h5>
-                <p class="text">Just upload images to chuus  </p>
+                <h5 class="subheading">Upload LINK to SNS</h5>
+                <p class="text">Your fans start shopping in your shop </p>
              </div>
           </div>
        </div>
@@ -299,9 +304,9 @@
           <div class="col-lg-3 col-md-12 col-sm-12">
             <div class="service text-center">
               <h2 class="heading">03.</h2>
-              <h5 class="subheading">Your own shop is created</h5>
+              <h5 class="subheading">Check your shop's order</h5>
               <p class="text">
-                Tell your fans about your store and start selling</p>
+                Please check the order history and send it to the customer.</p>
            </div>
           </div>
           <div class="col-lg-6 col-md-12 col-sm-12 wow fadeInUp" data-wow-delay="400ms" style="visibility: visible; animation-delay: 400ms; animation-name: fadeInUp;">
@@ -310,8 +315,8 @@
           <div class="col-lg-3 col-md-12 col-sm-12">
             <div class="service text-center">
               <h2 class="heading">04.</h2>
-              <h5 class="subheading">Monthly Passive Income</h5>
-              <p class="text">Influencers in chuus gets about ₱ 10000 in average</p>
+              <h5 class="subheading">Monthly Payroll</h5>
+              <p class="text">The amount minus a 3% commission fee will be settled into your account every month</p>
            </div>
           </div>
        </div>
@@ -324,9 +329,14 @@
 
       <!--Heading-->
       <div class="heading-area pb-lg-5">
-          <h6 class="sub-title main-color">WITH chuus</h6>
-          <h2 class="title"><b>We help you to start <br><span class = "main-color">Online business</span>  with few clicks</b></h2>
-
+          <h6 class="sub-title main-color">DO NOT WORRY</h6>
+          <h2 class="title"><b>
+            Don't you have any products <br> to sell to your Fans?</b>
+            <br></h2>
+            <p>
+            We have products list that is very popular among Korean women in their 20s.</p>
+            
+            <a href="/influencer/campaigns" class="btn btn-large btn-rounded btn-purple mr-2 mt-2">Check Now</a>
           <!--Portfolio Filters-->
           </p>
       </div>
@@ -429,10 +439,13 @@
   <section id="contact">
       <div class="container">
         <div class="heading-area pb-lg-5 text-center">
-            <h2 class="title"><b>Apply <span class = "main-color">Now </span> <br>Opportunity is waiting for you</b></h2>
+            <h2 class="title"><b>Apply <span class = "main-color">Now </span> <br>
+                Only 33 Influencer slots left
+            </b></h2>
             <p>
-             Please Send Us Your Instagram Account. We Will Contact You Soon.
+                Please share this website on Facebook and submit the link
             </p>
+            <div class="fb-share-button"  data-href="http://chuus.me"  data-layout="button_count"> </div>
         </div>
   
           <!--contact us-->
@@ -444,7 +457,7 @@
                   
                   <div class="col-md-12 col-sm-12">
                       <div class="form-group">
-                          <input class="form-control" type="text" placeholder="Instagram Account" required="" id="instagram" name="instagram">
+                          <input class="form-control" type="text" placeholder="FaceBook Link" required="" id="instagram" name="instagram">
                       </div>
                   </div>
                   <div class="col-sm-12">

@@ -298,13 +298,13 @@
                                 </a>
                                 <a href="shop-compare.html"><span class="lable ml-0">Compare</span></a>
                             </div> {% endcomment %}
-                            <div class="header-action-icon-2">
+                            {% comment %} <div class="header-action-icon-2">
                                 <a href="shop-wishlist.html">
                                     <img class="svgInject" alt="Nest" src="{% static 'assets/imgs/theme/icons/icon-heart.svg' %}" />
                                     <span class="pro-count blue">6</span>
                                 </a>
                                 <a href="shop-wishlist.html"><span class="lable">Wishlist</span></a>
-                            </div>
+                            </div> {% endcomment %}
                             {% comment %} <div class="header-action-icon-2">
                                 <a class="mini-cart-icon" href="shop-cart.html">
                                     <img alt="Nest" src="{% static 'assets/imgs/theme/icons/icon-cart.svg' %}" />
@@ -357,7 +357,7 @@
                                 <a href="page-account.html"><span class="lable ml-0">Account</span></a>
                                 <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
                                     <ul>
-                                        <li>
+                                        {% comment %} <li>
                                             <a href="page-account.html"><i class="fi fi-rs-user mr-10"></i>My Account</a>
                                         </li>
                                         <li>
@@ -368,7 +368,7 @@
                                         </li>
                                         <li>
                                             <a href="shop-wishlist.html"><i class="fi fi-rs-heart mr-10"></i>My Wishlist</a>
-                                        </li>
+                                        </li> {% endcomment %}
                                         {% if user.is_authenticated %}
                                         <li>
                                             <a href="{% url 'account_logout' %}"><i class="fi fi-rs-sign-out mr-10"></i>Sign out</a>
@@ -387,6 +387,7 @@
             </div>
         </div>
     </div>
+    
     <div class="header-bottom header-bottom-bg-color sticky-bar">
         <div class="container">
             <div class="header-wrap header-space-between position-relative">
@@ -394,7 +395,7 @@
                     <a href="/influencer/home"><img src="{% static 'assets/imgs/theme/logo.png' %}" alt="logo" /></a>
                 </div>
                 <div class="header-nav d-none d-lg-flex">
-                    <div class="main-categori-wrap d-none d-lg-block">
+                    {% comment %} <div class="main-categori-wrap d-none d-lg-block">
                         <a class="categories-button-active" href="#">
                             <span class="fi-rs-apps"></span> <span class="et">Browse</span> All Categories
                             <i class="fi-rs-angle-down"></i>
@@ -458,15 +459,15 @@
                             </div>
                             <div class="more_categories"><span class="icon"></span> <span class="heading-sm-1">Show more...</span></div>
                         </div>
-                    </div>
-                    <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block font-heading">
+                    </div> {% endcomment %}
+                    <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block font-heading" style = "margin:20px">
                         <nav>
                             <ul>
                                 <li class="hot-deals"><img src="{% static 'assets/imgs/theme/icons/icon-hot.svg' %}" alt="hot deals" /><a href="shop-grid-right.html">Deals</a></li>
                                 <li>
-                                    <a href="index.html">Clothing <i class="fi-rs-angle-down"></i></a>
+                                    <a href="/influencer/campaigns">Clothing <i class="fi-rs-angle-down"></i></a>
                                     <ul class="sub-menu">
-                                        <li><a href="index.html">DRESSES</a></li>
+                                        <li><a href="/influencer/campaigns?category=Dress">DRESSES</a></li>
                                         <li><a href="index-2.html">TOPS</a></li>
                                         <li><a href="index-3.html">BOTTOMS</a></li>
                                         <li><a href="index-4.html">DENIM</a></li>
@@ -475,7 +476,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="shop-grid-right.html">Accessories <i class="fi-rs-angle-down"></i></a>
+                                    <a href="/influencer/campaigns">Accessories <i class="fi-rs-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <li><a href="shop-grid-right.html">UNDER WEAR</a></li>
                                         <li><a href="shop-grid-left.html">SHOES</a></li>
@@ -486,9 +487,6 @@
                                 </li>
                                 <li>
                                     <a href="/influencer/about" {% if request.path == "/influencer/about" %} class = "active" {% endif %}>About</a>
-                                </li>
-                                <li>
-                                    <a href="/influencer/contact"{% if request.path == "/influencer/contact" %} class = "active" {% endif %}>Contact</a>
                                 </li>
                             </ul>
                         </nav>
@@ -749,6 +747,7 @@
 
   {% block pagecontent %} {% endblock %}
   <footer class="main">
+    <!--
     <section class="newsletter mb-15 wow animate__animated animate__fadeIn">
         <div class="container">
             <div class="row">
@@ -908,7 +907,7 @@
                         <li><a href="#">Cheese</a></li>
                     </ul>
                 </div>
-                <div class="footer-link-widget widget-install-app col wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
+                {% comment %} <div class="footer-link-widget widget-install-app col wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
                     <h4 class="widget-title">Install App</h4>
                     <p class="">From App Store or Google Play</p>
                     <div class="download-app">
@@ -917,16 +916,17 @@
                     </div>
                     <p class="mb-20">Secured Payment Gateways</p>
                     <img class="" src="{% static 'assets/imgs/theme/payment-method.png' %}" alt="" />
-                </div>
+                </div> {% endcomment %}
             </div>
     </section>
+    -->
     <div class="container pb-30 wow animate__animated animate__fadeInUp" data-wow-delay="0">
         <div class="row align-items-center">
             <div class="col-12 mb-30">
                 <div class="footer-bottom"></div>
             </div>
             <div class="col-xl-4 col-lg-6 col-md-6">
-                <p class="font-sm mb-0">&copy; 2022, <strong class="text-brand">Nest</strong> - HTML Ecommerce Template <br />All rights reserved</p>
+                <p class="font-sm mb-0">&copy; 2023, <strong class="text-brand">CHUUS</strong> - No.1 Influencer Platform <br />All rights reserved</p>
             </div>
             <div class="col-xl-4 col-lg-6 text-center d-none d-xl-block">
                 <div class="hotline d-lg-inline-flex mr-30">
@@ -947,7 +947,7 @@
                 <p class="font-sm">Up to 15% discount on your first subscribe</p>
             </div>
         </div>
-    </div>
+    </div> 
   </footer>
 <!-- Preloader Start -->
   <div id="preloader-active">
