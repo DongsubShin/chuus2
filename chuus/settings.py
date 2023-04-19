@@ -54,7 +54,7 @@ AUTH_USER_MODEL = 'api.User'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '54.151.240.215', 'chuus.me','www.chuus.me', 'chuus-1733554439.ap-southeast-1.elb.amazonaws.com']
+ALLOWED_HOSTS = ['localhost', '54.151.240.215', 'chuus.me','www.chuus.me']
 CSRF_TRUSTED_ORIGINS = ['http://54.151.240.215', 'http://chuus.me', 'http://www.chuus.me']
 
 
@@ -78,7 +78,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.facebook',
     'storages',
     'corsheaders',
-
+    'chuus',
 ]
 
 AUTH_USER_MODEL = 'api.User'
@@ -116,6 +116,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'social_django.middleware.SocialAuthExceptionMiddleware',
+    "chuus.middleware.HealthCheckMiddleware",
+
 ]
 
 ROOT_URLCONF = 'chuus.urls'
