@@ -53,7 +53,7 @@
                                         <span class="font-small ml-5 text-muted"> (32 reviews)</span>
                                     </div>
                                 </div> {% endcomment %}
-                                <div class="clearfix product-price-cover">
+                                {% comment %} <div class="clearfix product-price-cover">
                                     <div class="product-price primary-color float-left">
                                         <span class="current-price text-brand">₱{{campaign.price}}</span>
                                         <span>
@@ -61,9 +61,11 @@
                                             <span class="old-price font-md ml-15">₱{{campaign.before_price}}</span>
                                         </span>
                                     </div>
-                                </div>
+                                </div> {% endcomment %}
                                 <div class="short-desc mb-30">
+                                    <br>
                                     <p class="font-lg">{{campaign.info.html|safe}}</p>
+                                    <br>
                                 </div>
                                 {% comment %} <div class="sold mt-15 mb-15">
                                     <div class="progress mb-5">

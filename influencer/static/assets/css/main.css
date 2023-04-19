@@ -4393,6 +4393,7 @@ table .product-thumbnail img {
 
 .product-cart-wrap .product-card-bottom .add-cart {
   cursor: pointer;
+  width: 100%;
 }
 
 .product-cart-wrap .product-card-bottom .add-cart .add {
@@ -4403,6 +4404,8 @@ table .product-thumbnail img {
   background-color: #EACDCB;
   font-size: 14px;
   font-weight: 700;
+  width: 100%;
+  text-align: center;
 }
 
 .product-cart-wrap .product-card-bottom .add-cart .add:hover {
