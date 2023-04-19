@@ -54,7 +54,7 @@ AUTH_USER_MODEL = 'api.User'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '54.151.240.215', 'chuus.me','www.chuus.me',172.31.38.148]
+ALLOWED_HOSTS = ['localhost', '54.151.240.215', 'chuus.me','www.chuus.me','172.31.38.148']
 CSRF_TRUSTED_ORIGINS = ['http://54.151.240.215', 'http://chuus.me','https://chuus.me', 'http://www.chuus.me']
 
 
