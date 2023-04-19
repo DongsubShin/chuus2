@@ -901,20 +901,20 @@
                             </div> {% endcomment %}
                             <div class="deals-content">
                                 <h2><a href = "/influencer/campaigns/{{campaign.id}}/">{{campaign.name}}</a></h2>
-                                 <div class="product-rate-cover">
+                                 {% comment %} <div class="product-rate-cover">
                                     <div class="product-rate d-inline-block">
                                         <div class="product-rating" style="width: 90%"></div>
                                     </div>
                                     <span class="font-small ml-5 text-muted"> (4.0)</span>
-                                </div> 
+                                </div>  {% endcomment %}
                                 <div>
                                     <span class="font-small text-muted">By <a href="vendor-details-1.html">CHUUS</a></span>
                                 </div>
                                 <div class="product-card-bottom">
-                                    <div class="product-price">
+                                    {% comment %} <div class="product-price">
                                         <span>₱{{campaign.price}}</span>
                                         <span class="old-price">₱{{campaign.before_price}}</span>
-                                    </div>
+                                    </div> {% endcomment %}
                                     <div class="add-cart">
                                         <a class="add" href="shop-cart.html">APPLY </a>
                                     </div>
