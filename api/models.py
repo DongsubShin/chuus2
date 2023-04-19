@@ -51,9 +51,15 @@ class EarlyBird(models.Model):
 class CampaignCategory(models.Model):
     name = models.CharField(max_length=200)
 
+    def __str__(self):
+        return self.name
+
 class CampaignSubCategory(models.Model):
     name = models.CharField(max_length=200)
     category = models.ForeignKey(CampaignCategory, related_name='sub_categories', on_delete=models.CASCADE, default=None, null=True)
+    
+    def __str__(self):
+        return self.name
     
 class Campaign(models.Model): 
     name = models.CharField(max_length=255, null=True)
@@ -68,6 +74,10 @@ class Campaign(models.Model):
     hashtag = models.CharField(max_length=255, null=True)
     accounttag = models.CharField(max_length=255, null=True)
     info = QuillField()
+    
+    def __str__(self):
+        return self.name
+
     
 
 class CampaignOption(models.Model):
