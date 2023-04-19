@@ -78,7 +78,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.facebook',
     'storages',
     'corsheaders',
-    'chuus',
 ]
 
 AUTH_USER_MODEL = 'api.User'
