@@ -12,8 +12,8 @@ urlpatterns = [
     path('about', views.AboutPageView.as_view(), name='about'),
     path('campaigns/', views.CampaignListPageView.as_view(), name='list'),
     path('campaigns/<int:pk>/', views.CampaignDetailPageView.as_view(), name='detail'),
-    path('accounts/', include('allauth.urls')),
-
+    path('campaigns/<int:pk>/influencer/', views.CampaignInfluencerPageView.as_view(), name='detail'),
+    
  
 ]
 

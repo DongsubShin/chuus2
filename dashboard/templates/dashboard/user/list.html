@@ -149,7 +149,7 @@
                                                         <th class="min-w-125px sorting text-center" tabindex="0"
                                                             aria-controls="kt_table_users" rowspan="1" colspan="1"
                                                             aria-label="User: activate to sort column ascending"
-                                                            style="width: 251.562px;"><a href = "/dashboard/users/groups/{{group.id}}/?category=location&order={{order}}">지역</a></th>
+                                                            style="width: 251.562px;"><a href = "/dashboard/users/groups/{{group.id}}/?category=location&order={{order}}">페이스북</a></th>
                                                        
                                                         <th class="min-w-125px sorting text-center" tabindex="0"
                                                             aria-controls="kt_table_users" rowspan="1" colspan="1"
@@ -196,7 +196,7 @@
                                                             <!--begin::User details-->
                                                             <div class="d-flex flex-column">
                                                                 <a href="/dashboard/users/{{user.id}}"
-                                                                    class="text-gray-800 text-hover-primary mb-1">{{user.name}}
+                                                                    class="text-gray-800 text-hover-primary mb-1">{{user.socialaccount_set.all.first.extra_data.first_name}} {{user.socialaccount_set.all.first.extra_data.last_name}}
                                                                     </a>
                                                                 <span>{{user.email}}</span>
                                                             </div>
@@ -205,7 +205,8 @@
                                                         <!--end::User=-->
                                                         <!--begin::Last login=-->
                                                         <td class = "text-center" data-order="2022-02-21T10:30:00+09:00">
-                                                            <div class="badge badge-light fw-bolder">{{user.location}}</div>
+                                                            <div class="badge badge-light fw-bolder">
+                                                                <img src = "{{user.socialaccount_set.all.first.get_avatar_url}}" style = "width:50px"></div>
                                                         </td>
                                                         <!--begin::Joined-->
                                                         <td class = "text-center" data-order="2022-02-21T10:30:00+09:00">

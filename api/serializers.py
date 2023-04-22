@@ -10,3 +10,14 @@ class EarlyBirdSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.EarlyBird
         fields = '__all__'
+        
+
+class InfluencerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Influencer
+        fields = '__all__'
+        
+class CampaignSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Campaign
+        fields = '__all__'

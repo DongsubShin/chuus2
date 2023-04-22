@@ -32,6 +32,7 @@
     <!-- Template CSS -->
     <link rel="stylesheet" href="{% static 'assets/css/plugins/animate.min.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+    <script src="{% static 'assets/js/vendor/jquery-3.6.0.min.js' %} "></script>
 
 
   </head>
@@ -962,7 +963,6 @@
   <!-- Vendor JS-->
   
   <script src="{% static 'assets/js/vendor/modernizr-3.6.0.min.js' %}"></script>
-  <script src="{% static 'assets/js/vendor/jquery-3.6.0.min.js' %} "></script>
   <script src="{% static 'assets/js/vendor/jquery-migrate-3.3.0.min.js' %} "></script>
   <script src="{% static 'assets/js/vendor/bootstrap.bundle.min.js' %}"></script>
   <script src="{% static 'assets/js/plugins/slick.js' %} "></script>
@@ -993,4 +993,36 @@
 
 </body>
 
+
+<script>
+    function getCookie(name) {
+      var cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+          var cookies = document.cookie.split(';');
+          for (var i = 0; i < cookies.length; i++) {
+              var cookie = cookies[i].trim();
+              // Does this cookie string begin with the name we want?
+              if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                  cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                  break;
+              }
+          }
+      }
+      return cookieValue;
+  }
+  
+  var csrftoken = getCookie('csrftoken');
+  
+  function csrfSafeMethod(method) {
+      // these HTTP methods do not require CSRF protection
+      return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+  }
+  $.ajaxSetup({
+      beforeSend: function(xhr, settings) {
+          if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+              xhr.setRequestHeader("X-CSRFToken", csrftoken);
+          }
+      }
+  });
+  </script>
 </html>

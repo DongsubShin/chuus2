@@ -6,6 +6,8 @@ from api import views
 router = DefaultRouter()
 
 router.register('earlyBird', views.EarlyBirdViewSet)
+router.register('campaign', views.CampaignViewSet)
+router.register('influencer', views.InfluencerViewSet)
 
 
 

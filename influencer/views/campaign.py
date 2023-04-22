@@ -10,19 +10,29 @@ from django.contrib.auth import login, logout
 
 from django.template import loader
 from rest_framework.authtoken.models import Token
+from django.http import HttpResponse
 
-# Create your views here.
-class HomePageView(TemplateView):
-    template_name = "index.html"
+class CampaignInfluencerPageView(TemplateView):
+    template_name = "campaign/campaign_influencer.html"
+    
     def get(self, request, *args, **kwargs):
-        campaigns = models.Campaign.objects.all()
-
+        print(request)
         ctx = {
-            'campaigns': campaigns,    
         }
         return self.render_to_response(ctx)
-
     
+    def post(self, request, *args, **kwargs):
+        print(request)
+        campaign = models.Campaign.objects.get(pk = kwargs['pk'])
+        influencer = models.Influencer()
+        influencer.user = request.user
+        influencer.campaign = campaign
+        influencer.save()
+        ctx = {
+        }
+        return HttpResponse('Hello world!')
+
+
 class CampaignDetailPageView(TemplateView):
     template_name = "campaign/campaign_detail.html"
     def get(self, request, *args, **kwargs):
@@ -31,6 +41,19 @@ class CampaignDetailPageView(TemplateView):
         
         campaign = models.Campaign.objects.get(pk = kwargs['pk'])
         images = models.CampaignImage.objects.filter(campaign = campaign)
+        ctx = {
+            'campaigns': campaigns,
+            'campaign': campaign,
+            'images': images,    
+        }
+        return self.render_to_response(ctx)
+    
+class CampaignApplyPageView(TemplateView):
+    template_name = "campaign/campaign_detail.html"
+    def post(self, request, *args, **kwargs):
+        print(request)
+        campaign = models.Campaign.objects.get(pk = kwargs['pk'])
+        influencer = models.Influencer.objects.get(user = request.user)
         ctx = {
             'campaigns': campaigns,
             'campaign': campaign,
@@ -48,12 +71,3 @@ class CampaignListPageView(TemplateView):
             'campaigns': campaigns,
         }
         return self.render_to_response(ctx)
-
-class AboutPageView(TemplateView):
-    template_name = "about.html"
-
-class ContactPageView(TemplateView):
-    template_name = "contact.html"
-
-class LoginPageView(TemplateView):
-    template_name = "login.html"

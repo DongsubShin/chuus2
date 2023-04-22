@@ -97,7 +97,7 @@
                                     <div class="product-extra-link2" style = "width:100%">
                                         
                                         {% if user.is_authenticated %}
-                                            <button type="submit" class="button button-add-to-cart" style = "width:100%"><i class="fi-rs-heart"></i>APPLY</button>
+                                            <button id = "ajax" class="button button-add-to-cart" style = "width:100%"><i class="fi-rs-heart"></i>APPLY</button>
                                         {% else%}
                                             Code: {{ auth_error.code }}, Error: {{ auth_error.exception }}
 
@@ -459,4 +459,38 @@
     </div>
 </main>
    
+
+<script>
+    $(document).ready(function () {
+  
+      $("#ajax").click(function (e) {
+        e.preventDefault();
+        var formData = new FormData();
+        
+        $.ajax({
+            type: "POST",
+            url: "/influencer/campaigns/{{campaign.id}}/influencer/",
+            data: formData,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (result) {
+                alert("Apply Confirmed :)");
+                console.log(result);
+        
+            },
+            error: function (result) {
+                console.log(result);
+                alert("Apply failed :(");
+            },
+        });
+        
+        
+    });
+});
+
+  </script>
+
+
+
 {% endblock %}
