@@ -144,7 +144,7 @@ p:last-child {
 
 a:active,
 a:hover {
-    color: #EACDCB;
+    color: #E78C9D;
 }
 
 blockquote {
@@ -327,13 +327,13 @@ section {
 
 .btn.btn-transparent-purple {
     background: transparent;
-    border-color: #EACDCB;
-    color: #EACDCB
+    border-color: #E78C9D;
+    color: #E78C9D
 }
 
 .btn.btn-transparent-purple:hover,
 .btn.btn-transparent-purple:focus {
-    background: #EACDCB !important;
+    background: #E78C9D !important;
     color: #ffffff !important
 }
 
@@ -351,16 +351,16 @@ section {
 }
 
 .btn.btn-purple {
-    background: #EACDCB;
-    border-color: #EACDCB;
+    background: #E78C9D;
+    border-color: #E78C9D;
     color: #ffffff
 }
 
 .btn.btn-purple:hover,
 .btn.btn-purple:focus {
     background: transparent !important;
-    border-color: #EACDCB;
-    color: #EACDCB !important
+    border-color: #E78C9D;
+    color: #E78C9D !important
 }
 
 .btn.btn-hvr-white:hover,
@@ -372,7 +372,7 @@ section {
 
 /* background color */
 .bg-main {
-    background: #EACDCB;
+    background: #E78C9D;
 }
 
 .bg-black {
@@ -384,7 +384,7 @@ section {
 }
 
 .bg-blue {
-    background-color: #EACDCB;
+    background-color: #E78C9D;
 }
 
 .bg-pink {
@@ -397,7 +397,7 @@ section {
 
 /* text-color */
 .main-color {
-    color: #EACDCB;
+    color: #E78C9D;
 }
 
 /*Max Width*/
@@ -415,7 +415,7 @@ section {
 }
 
 .social-icon-bg a i.fa-twitter {
-    background-color: #EACDCB;
+    background-color: #E78C9D;
 }
 
 .social-icon-bg a i.fa-google-plus {
@@ -495,7 +495,7 @@ section {
 }
 
 .social-icon-bg-hvr a:hover i.fa-twitter {
-    background-color: #EACDCB;
+    background-color: #E78C9D;
 }
 
 .social-icon-bg-hvr a:hover i.fa-google-plus {
@@ -789,12 +789,12 @@ header a.logo img {
 }
 
 .header-appear .nav-box-round .navbar-nav .nav-link.active {
-    background-color: #EACDCB;
+    background-color: #E78C9D;
     color: #ffffff !important;
 }
 
 .header-appear .nav-box-round .navbar-nav .nav-link:hover {
-    color: #EACDCB;
+    color: #E78C9D;
 }
 
 /*nav line*/
@@ -823,7 +823,7 @@ header a.logo img {
     -webkit-transform: scaleX(0);
     -ms-transform: scaleX(0);
     transform: scaleX(0);
-    background: #EACDCB;
+    background: #E78C9D;
     visibility: hidden;
     opacity: 0;
 }
@@ -838,7 +838,7 @@ header a.logo img {
     position: fixed;
     right: 0;
     top: 0;
-    background: #EACDCB;
+    background: #E78C9D;
     z-index: 1032;
     height: 100%;
     -webkit-transform: translate3d(100%, 0, 0);
@@ -1230,7 +1230,7 @@ svg.slider-shape {
 .about-list li .a-icon {
     font-size: 25px;
     margin-right: 15px;
-    color: #EACDCB;
+    color: #E78C9D;
 }
 
 /* ===================================
@@ -1302,7 +1302,7 @@ svg.slider-shape {
 
 .services-skill .progress-bar {
     border-radius: 50px;
-    background-color: #EACDCB;
+    background-color: #E78C9D;
 }
 
 .progress-item b {
@@ -1329,7 +1329,7 @@ svg.slider-shape {
 .team-detail .social-icon {
     margin: 0;
     list-style: none;
-    background: #EACDCB;
+    background: #E78C9D;
     padding: 22px 0;
 }
 
@@ -1379,15 +1379,15 @@ svg.slider-shape {
 }
 
 .cube-portfolio1 .cbp-l-filters-button .cbp-filter-item.cbp-filter-item-active {
-    color: #EACDCB;
+    color: #E78C9D;
 }
 
 .cube-portfolio1 .cbp-l-filters-button .cbp-filter-item:hover {
-    color: #EACDCB;
+    color: #E78C9D;
 }
 
 .cube-portfolio1 .cbp-l-grid-mosaic-flat .cbp-caption-activeWrap {
-    background: #EACDCB;
+    background: #E78C9D;
     -webkit-transition: opacity .3s ease-in-out;
     -o-transition: opacity .3s ease-in-out;
     transition: opacity .3s ease-in-out;
@@ -1562,7 +1562,7 @@ svg.slider-shape {
 }
 
 .news-item .news-title:hover {
-    color: #EACDCB;
+    color: #E78C9D;
 }
 
 .news-item .author {
@@ -1592,7 +1592,7 @@ svg.slider-shape {
 }
 
 .news-item .author .author-name:hover {
-    color: #EACDCB;
+    color: #E78C9D;
 }
 
 /* ===================================
@@ -1697,7 +1697,7 @@ svg.slider-shape {
 }
 
 .footer-social li a:hover {
-    background-color: #EACDCB;
+    background-color: #E78C9D;
     color: #ffffff;
 }
 
@@ -1715,7 +1715,7 @@ svg.slider-shape {
     font-size: 23px;
     line-height: 47px;
     color: #fff;
-    background-color: #EACDCB;
+    background-color: #E78C9D;
     display: none;
     height: 45px;
     width: 45px;
@@ -1734,7 +1734,7 @@ svg.slider-shape {
 }
 
 .scroll-top-arrow:hover {
-    background-color: #EACDCB;
+    background-color: #E78C9D;
 }
 
 
@@ -1808,7 +1808,7 @@ svg.slider-shape {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #EACDCB;
+    background: #E78C9D;
     opacity: 1;
     -webkit-animation: loader-bounce 2s infinite ease-in-out;
     animation: loader-bounce 2s infinite ease-in-out;
@@ -1927,7 +1927,7 @@ svg.slider-shape {
 
 .page-breadcrumb li a .icon {
     margin-right: 4px;
-    color: #EACDCB;
+    color: #E78C9D;
 }
 
 .page-breadcrumb li a:hover {
@@ -1960,11 +1960,11 @@ svg.slider-shape {
 
 .post-details .post-categories a {
     position: relative;
-    color: #EACDCB;
+    color: #E78C9D;
     padding: 4px 15px;
     margin-right: 3px;
     display: inline-block;
-    border: 1px solid #EACDCB;
+    border: 1px solid #E78C9D;
     border-radius: 50px;
     -webkit-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
@@ -1973,7 +1973,7 @@ svg.slider-shape {
 
 .post-details .post-categories a:hover {
     color: #fff;
-    background-color: #EACDCB;
+    background-color: #E78C9D;
 }
 
 .post-details {
@@ -2054,7 +2054,7 @@ svg.slider-shape {
 }
 
 .blog-single .post-tags a:hover {
-    background-color: #EACDCB;
+    background-color: #E78C9D;
 
     color: #fff;
 }
@@ -2195,7 +2195,7 @@ svg.slider-shape {
     right: 0;
     z-index: 5;
     cursor: pointer;
-    background: #EACDCB;
+    background: #E78C9D;
     color: #fff;
 }
 
@@ -2779,7 +2779,7 @@ select.inputerror {
 }
 
 .about-section .heading-col .subheading {
-    color: #EACDCB;
+    color: #E78C9D;
     font-weight: 600;
 }
 
@@ -2828,7 +2828,7 @@ select.inputerror {
 }
 
 .about-section .yoga-services .service:hover .heading {
-    color: #EACDCB;
+    color: #E78C9D;
     transform: translateY(-10px);
     transition: all .5s ease;
 }
